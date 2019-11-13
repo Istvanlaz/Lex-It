@@ -1,15 +1,17 @@
+
       <div class="container-banner">
-        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=541&q=80" alt="Online Book Library" id="background-image">
+        <%= image_tag("background_image_landing_page.jpeg", alt: "alttext") %>
+        <%= render "devise/registrations/new" %>
         <div class="title-ban">
 
-          <h1><em>Know-Book</em></h1>
+          <h1><em>Lex-It!</em></h1>
           <br>
 
           <h3>Every Student's Dream App</h3>
           <br>
 
-          <p>The first <strong>interactive</strong>, <strong>connected</strong> and <strong>centralised</strong> App where you will be able to access all your Academic Books, Class Notes and Topic-Related News.</p>
+          <p>The first <strong>interactive</strong>, <br><strong>connected</strong> <br>and <strong>centralised</strong> App <br>where you will be able to <br>access all your Academic Books, <br>Class Notes and Topic-Related News.</p>
 
-          <p class="button-medium"><%= link_to "Browse your Library", books_path %></p>
+          <!-- <p class="button-medium"><%= link_to "Browse your Library", books_path %></p> -->
         </div>
       </div>
