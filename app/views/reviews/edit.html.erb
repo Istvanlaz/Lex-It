@@ -1,1 +1,5 @@
-edit.html.erb
+<%= simple_form_for [@book, @review] do |f| %>
+  <%= f.input :content %>
+  <%= f.input :author, :input_hmtl => { :value => current_user } %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>

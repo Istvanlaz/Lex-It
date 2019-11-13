@@ -1,8 +1,8 @@
 {
-  "name": "Lex-It!",
+  "name": "KNOW-BOOK",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "^4.2.0",
+    "@rails/webpacker": "^4.0.7",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0"

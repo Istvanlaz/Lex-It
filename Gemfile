@@ -1,18 +1,26 @@
 source 'https://rubygems.org'
 ruby '2.6.3'
 
+
+gem "aws-sdk-s3", require: false
 gem 'bootsnap', require: false
-gem 'devise'
+gem 'bootstrap-sass'
+gem 'carrierwave', '~> 1.2'
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.2.3'
 gem 'redis'
+gem 'cloudinary', '~> 1.9.1'
+gem 'pundit'
+
 
 gem 'autoprefixer-rails'
+gem 'devise'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'sassc-rails'
 gem 'simple_form'
+gem 'searchkick', '~> 3.0'
 gem 'uglifier'
 gem 'webpacker'
 
