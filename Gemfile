@@ -13,6 +13,7 @@ gem 'rails', '5.2.3'
 gem 'redis'
 gem 'cloudinary', '~> 1.9.1'
 gem 'pundit'
+gem 'active_storage_validations'
 
 
 gem 'autoprefixer-rails'
