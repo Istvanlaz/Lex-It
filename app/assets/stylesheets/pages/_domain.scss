@@ -1,3 +1,11 @@
+
+.container-domain h1 {
+  color: red;
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+}
+
 .domain_pic {
   border-radius: 50%;
 }
@@ -19,5 +27,13 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  text-shadow: 2px 2px 10px #000;
 }
 
+.container-domain {
+  position: relative;
+  padding: 15vh 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
