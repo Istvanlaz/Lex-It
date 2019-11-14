@@ -21,4 +21,3 @@ class Book < ApplicationRecord
     return errors.add(:resume, "must add an resume") unless resume.attached?
   end
 end
-
