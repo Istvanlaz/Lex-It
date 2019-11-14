@@ -13,7 +13,7 @@
                     <h4 class="card-book-author"><%= book.author %></h4>
                       <h7 id="star">⭐ <%= book.average_rating %></h7 id="star">
                     <% if policy(book).show? %>
-                      <p><%= link_to "Details", book_path(book), class: 'btn-details' %></p>
+                      <p><%= link_to "Details", domain_book_path(book), class: 'btn-details' %></p>
                     <% end %>
                 </div>
                 </div>
@@ -23,7 +23,7 @@
           </div>
        </div>
        <% if policy(Book).new? %>
-          <%= link_to "Create a New Book?", new_book_path, class: 'btn-details2' %>
+          <%= link_to "Create a New Book?", new_domain_book_path, class: 'btn-details2' %>
        <% end %>
   </div>
 

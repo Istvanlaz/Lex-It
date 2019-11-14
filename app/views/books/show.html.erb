@@ -5,7 +5,7 @@
       <h2><strong>KNOW-BOOK</strong></h2>
       <h5>The best App for any student who wishes to have their books at hand at any time.</h5>
       <br>
-      <p class="btn button-medium-small"><%= link_to "All books", books_path %></p>
+      <p class="btn button-medium-small"><%= link_to "All books", domain_books_path %></p>
     </div>
   </div>
   <div class="container-show">
@@ -20,7 +20,7 @@
           <% end %>
         </div>
         <div class="btn-show">
-          <p id="reading_list" class="btn button-show"><%= link_to "Add to reading list - Available Soon! -", book_path %></p>
+          <p id="reading_list" class="btn button-show"><%= link_to "Add to reading list - Available Soon! -", domain_book_path %></p>
         </div>
           <br>
         <div class="book-content column">
@@ -48,7 +48,7 @@
         </div>
         <br>
         <div id="buttons-descr">
-          <p class="btn button-show"><%= link_to "Add a Rating", new_book_rating_path(@book) %></p>
+          <p class="btn button-show"><%= link_to "Add a Rating", new_domain_book_rating_path(@book) %></p>
         </div>
         <br>
         <div class="reviews-container">
@@ -73,11 +73,11 @@
 
     <div>
       <% if policy(@book).destroy? %>
-          <p class="btn btn-show"><%= link_to "Delete Book", book_path, method: :delete, data: { confirm: "Are you Sure about Deleting this Book?" } %></p>
+          <p class="btn btn-show"><%= link_to "Delete Book", domain_book_path, method: :delete, data: { confirm: "Are you Sure about Deleting this Book?" } %></p>
         <% end %>
 
         <% if policy(@book).edit? %>
-          <p class="btn btn-show"><%= link_to "Edit Book", edit_book_path(@book) %></p>
+          <p class="btn btn-show"><%= link_to "Edit Book", edit_domain_book_path(@book) %></p>
       <% end %>
     </div>
 </div>
