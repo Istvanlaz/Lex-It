@@ -432,7 +432,7 @@ puts 'Creating awesome Class Notes...'
 
 classnote0 = ClassNote.new({
   user_id: user_2.id,
-  course: course_3,
+  course: course_1,
   title: "SQL Basics",
   author: "Me, Myself and Irene",
   click_counter: 4
@@ -443,7 +443,7 @@ classnote0.save!
 
 classnote1 = ClassNote.new({
   user_id: user_2.id,
-  course: course_3,
+  course: course_2,
   title: "SQL Median",
   author: "Me, Myself and Irene",
   click_counter: 4
@@ -463,7 +463,7 @@ classnote2.save!
 
 classnote3 = ClassNote.new({
   user_id: user_2.id,
-  course: course_3,
+  course: course_4,
   title: "SQL for Pros!!",
   author: "Me, Myself and Irene",
   click_counter: 4
@@ -473,7 +473,7 @@ classnote3.save!
 
 classnote4 = ClassNote.new({
   user_id: user_2.id,
-  course: course_3,
+  course: course_5,
   title: "Front is not made for bitches",
   author: "Me, Myself and Irene",
   click_counter: 4
@@ -483,7 +483,7 @@ classnote4.save!
 
 classnote5 = ClassNote.new({
   user_id: user_2.id,
-  course: course_3,
+  course: course_6,
   title: "I'm the king of them bananas",
   author: "Me, Myself and Irene",
   click_counter: 4
