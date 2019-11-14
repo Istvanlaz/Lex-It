@@ -13,6 +13,7 @@ gem 'rails', '5.2.3'
 gem 'redis'
 gem 'cloudinary', '~> 1.9.1'
 gem 'pundit'
+gem 'active_storage_validations'
 
 
 gem 'autoprefixer-rails'
@@ -23,6 +24,7 @@ gem 'simple_form'
 gem 'searchkick', '~> 3.0'
 gem 'uglifier'
 gem 'webpacker'
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development do
   gem 'web-console', '>= 3.3.0'
@@ -34,5 +36,4 @@ group :development, :test do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'dotenv-rails'
 end

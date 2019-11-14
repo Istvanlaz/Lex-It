@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_08_134746) do
+ActiveRecord::Schema.define(version: 2019_11_13_151432) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,35 @@ ActiveRecord::Schema.define(version: 2019_11_08_134746) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "class_notes", force: :cascade do |t|
+    t.string "title"
+    t.string "author"
+    t.integer "click_counter"
+    t.bigint "user_id"
+    t.bigint "course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image"
+    t.index ["course_id"], name: "index_class_notes_on_course_id"
+    t.index ["user_id"], name: "index_class_notes_on_user_id"
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.string "name"
+    t.bigint "domain_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image"
+    t.index ["domain_id"], name: "index_courses_on_domain_id"
+  end
+
+  create_table "domains", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image"
+  end
+
   create_table "ratings", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -78,6 +107,15 @@ ActiveRecord::Schema.define(version: 2019_11_08_134746) do
     t.datetime "updated_at", null: false
     t.index ["book_id"], name: "index_readings_on_book_id"
     t.index ["user_id"], name: "index_readings_on_user_id"
+  end
+
+  create_table "registrations", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_registrations_on_course_id"
+    t.index ["user_id"], name: "index_registrations_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -109,8 +147,13 @@ ActiveRecord::Schema.define(version: 2019_11_08_134746) do
   add_foreign_key "books", "categories"
   add_foreign_key "books", "reading_lists"
   add_foreign_key "books", "users"
+  add_foreign_key "class_notes", "courses"
+  add_foreign_key "class_notes", "users"
+  add_foreign_key "courses", "domains"
   add_foreign_key "ratings", "books"
   add_foreign_key "readings", "books"
   add_foreign_key "readings", "users"
+  add_foreign_key "registrations", "courses"
+  add_foreign_key "registrations", "users"
   add_foreign_key "reviews", "books"
 end

@@ -29,7 +29,7 @@ class BooksController < ApplicationController
     authorize @book = Book.new(book_params)
     @book.user = current_user
     if @book.save
-      redirect_to book_path(@book)
+      redirect_to domain_book_path(@book)
     else
       render :new
     end
@@ -38,7 +38,7 @@ class BooksController < ApplicationController
   def update
     authorize @book = Book.find(params[:id])
     if @book.update(book_params)
-      redirect_to books_path
+      redirect_to domain_books_path
     else
       # @book.errors
       render :new
@@ -48,12 +48,12 @@ class BooksController < ApplicationController
   def destroy
     authorize @book = Book.find(params[:id])
     @book.destroy
-    redirect_to books_path
+    redirect_to domain_books_path
   end
 
   private
 
   def book_params
-    params.require(:book).permit(:title, :author, :publishing_year, :resume, :user)
+    params.require(:book).permit(:title, :author, :publishing_year, :resume, :user, :image, :domain_id)
   end
 end

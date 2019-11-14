@@ -15,7 +15,7 @@ class RatingsController < ApplicationController
     @rating = Rating.new(rating_params)
     @rating.book = @book
     if @rating.save
-      redirect_to book_path(@book)
+      redirect_to domain_book_path(@book)
     else
       render :new
     end
@@ -30,6 +30,6 @@ class RatingsController < ApplicationController
   private
 
   def rating_params
-    params.require(:rating).permit(:rating, :book_id)
+    params.require(:rating).permit(:rating, :book_id, :domain_id)
   end
 end
