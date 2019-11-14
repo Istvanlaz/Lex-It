@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
+  resources :domains, only: :index
   resources :books do
     resources :ratings
     resources :reviews
