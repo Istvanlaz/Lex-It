@@ -1,0 +1,23 @@
+.domain_pic {
+  border-radius: 50%;
+}
+
+.card-domain {
+  position: relative;
+}
+
+.card-domain a {
+  position: absolute;
+  background: transparent;
+  padding: 122px;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  color: white;
+  font-size: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+

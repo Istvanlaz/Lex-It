@@ -12,7 +12,7 @@
     <div class="container-left">
       <div class="card-book">
         <div class="img-book">
-          <img src="https://www.perlego.com/books/RM_Books/pearson_lm/9781292256047.jpg" alt="Some descritpion">
+          <%= cl_image_tag @book.image, height: 600, width: 400, crop: :fill %>
           <% if @book.resume.attached? %>
             <%= link_to "PDF", url_for(@book.resume) %>
           <% else %>
