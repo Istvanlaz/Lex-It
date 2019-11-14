@@ -14,12 +14,7 @@
 }
 
 .form-inline{
-  float: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+  justify-content: space-between;
 }
 .nav-item{
   float: right;
@@ -29,4 +24,19 @@
 .avatar{
   display:flex;
   justify-content:flex-end;
+}
+
+.form-inputs .form-inline{
+  width: 84%;
+}
+.topnav{
+  width: 54vw;
+  padding: 10px;
+
+}
+
+.simple_form_for {
+  display:flex;
+  position: relative;
+  justify-content:space-between;
 }

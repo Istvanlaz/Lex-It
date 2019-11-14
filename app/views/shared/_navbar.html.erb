@@ -17,20 +17,24 @@
        <!--  <% if user_signed_in? %>
             <%= link_to "All Books", books_path, class: "nav-link" %>
         <% else %>
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
           </li>
 
         <% end %> -->
       </ul>
     </div>
-    <div class="topnav">
-      <div class="login-container">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Email" name="username">
-          <input type="text" placeholder="Password" name="psw">
-          <button type="submit">Login</button>
-        </form>
+    <div class="topnav col-6" style="width : auto;">
+
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-inputs form-inline" >
+        <%= f.input :email, required: false, autofocus: true, placeholder: "Email", label:false %>
+
+        <%= f.input :password, required: false, placeholder: "Password", label:false %>
+
+        <%= f.button :submit, "Log in", class: "btn btn-primary" %>
       </div>
+        <%= render "devise/shared/links" %>
+      <% end %>
     </div>
 
     <div class="avatar-spot">
@@ -47,8 +51,7 @@
     </form>
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false  %>
       <% else %>
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
+
       <% end %>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
