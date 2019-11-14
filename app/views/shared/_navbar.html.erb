@@ -40,7 +40,7 @@
     <div class="avatar-spot">
       <% if user_signed_in? %>
       <form class="form-inline">
-      <%= form_tag books_path, method: :get do %>
+      <%= form_tag domain_books_path, method: :get do %>
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",
