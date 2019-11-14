@@ -112,149 +112,164 @@ user_8 = User.create!( {
 puts 'Creating awesome books...'
 
 book0 = Book.new({
-  user: user_6,
   category_id: categories.sample,
   title: "Machine Learning with python cookbook",
   publishing_year: 2018,
-  author: "Chris Albon",
+  author: "Chris Albon"
 })
+book0.user = user_6
 book0.image.attach(io: File.open("https://images-na.ssl-images-amazon.com/images/I/51TcoYciN6L._SX379_BO1,204,203,200_.jpg"), filename: "imagebook0.jpg")
+book0.save!
 
-book1 = Book.new ({
-  user: user_6,
+book1 = Book.new({
   category_id: categories.sample,
   title: "Programming Pearls 2nd edition",
   publishing_year: 2000,
-  author: "Jon Bentley",
+  author: "Jon Bentley"
 })
-book1.image.attach(io: File.open('https://images-na.ssl-images-amazon.com/images/I/5182nSkamwL._SX367_BO1,204,203,200_.jpg',filename: "imagebook1.jpg")
+book1.user = user_6
+book1.image.attach(io: File.open('https://images-na.ssl-images-amazon.com/images/I/5182nSkamwL._SX367_BO1,204,203,200_.jpg'),filename: "imagebook1.jpg")
+book1.save!
 
-book2 = Book.new ({
-  user: user_6,
+book2 = Book.new({
   category_id: categories.sample,
   title: "More programming pearls",
   publishing_year: 1988,
-  author: "Jon Bentley",
+  author: "Jon Bentley"
 })
-book2.image.attach(io: File.open('https://images-na.ssl-images-amazon.com/images/I/51OLe7bvBWL._SX336_BO1,204,203,200_.jpg',filename: "imagebook2.jpg") )
+book2.user = user_6
+book2.image.attach(io: File.open('https://images-na.ssl-images-amazon.com/images/I/51OLe7bvBWL._SX336_BO1,204,203,200_.jpg'),filename: "imagebook2.jpg")
+book2.save!
 
-book3 = Book.new ({
-  user: user_6,
+book3 = Book.new({
   category_id: categories.sample,
   title: "Eloquent Javascript 1st edition",
   publishing_year: 2011,
-  author: "Marijn Haverbeke",
+  author: "Marijn Haverbeke"
 })
-book3.image.attach(io: File.open("https://images-na.ssl-images-amazon.com/images/I/515jiKSErDL._SX376_BO1,204,203,200_.jpg",filename: "imagebook3.jpg")
+book3.user = user_6
+book3.image.attach(io: File.open("https://images-na.ssl-images-amazon.com/images/I/515jiKSErDL._SX376_BO1,204,203,200_.jpg"),filename: "imagebook3.jpg")
+book3.save!
 
-book4 = Book.new ({
-  user: user_6,
+book4 = Book.new({
   category_id: categories.sample,
   title: "Eloquent Javascript 2nd edition",
   publishing_year: 2014,
-  author: "Marijn Haverbeke",
+  author: "Marijn Haverbeke"
 })
-book4.image.attach(io: File.open("https://images-na.ssl-images-amazon.com/images/I/515jiKSErDL._SX376_BO1,204,203,200_.jpg",filename: "imagebook4.jpg")
+book4.user = user_6
+book4.image.attach(io: File.open("https://images-na.ssl-images-amazon.com/images/I/515jiKSErDL._SX376_BO1,204,203,200_.jpg"),filename: "imagebook4.jpg")
+book4.save!
 
-book5 = Book.new ({
-  user: user_6,
+book5 = Book.new({
   category_id: categories.sample,
   title: "Eloquent Javascript 3rd edition",
   publishing_year: 2018,
-  author: "Marijn Haverbeke",
+  author: "Marijn Haverbeke"
 })
-book5.image.attach(io: File.open("https://images-na.ssl-images-amazon.com/images/I/51-5ZXYtcML._SX377_BO1,204,203,200_.jpg",filename: "imagebook5.jpg")
+book5.user = user_6
+book5.image.attach(io: File.open("https://images-na.ssl-images-amazon.com/images/I/51-5ZXYtcML._SX377_BO1,204,203,200_.jpg"),filename: "imagebook5.jpg")
+book5.save!
 
-book6 = Book.new ({
-  user: user_6,
+book6 = Book.new({
   category_id: categories.sample,
   title: "JavaScript and JQuery: Interactive Front–End Web Development",
   publishing_year: 2014,
-  author: "Jon Duckket",
+  author: "Jon Duckket"
 })
-book6.image.attach(io: File.open("https://images-na.ssl-images-amazon.com/images/I/41y31M-zcgL._SX400_BO1,204,203,200_.jpg",filename: "imagebook6.jpg")
+book6.user = user_6
+book6.image.attach(io: File.open("https://images-na.ssl-images-amazon.com/images/I/41y31M-zcgL._SX400_BO1,204,203,200_.jpg"),filename: "imagebook6.jpg")
+book6.save!
 
-book7 = Book.new ({
-  user: user_6,
+book7 = Book.new({
   category_id: categories.sample,
   title: "Modern API Design with ASP.NET Core 2: Building Cross-Platform Back-End Systems",
   publishing_year: 2018,
-  author: "Fany Reynders",
+  author: "Fany Reynders"
 })
-book7.image.attach(io: File.open("https://images-na.ssl-images-amazon.com/images/I/41Nd3IVeklL._SX348_BO1,204,203,200_.jpg",filename: "imagebook7.jpg")
+book7.user = user_6
+book7.image.attach(io: File.open("https://images-na.ssl-images-amazon.com/images/I/41Nd3IVeklL._SX348_BO1,204,203,200_.jpg"),filename: "imagebook7.jpg")
+book7.save!
 
-book8 = Book.new ({
-  user: user_6,
+book8 = Book.new({
   category_id: categories.sample,
   title: "Fullstack React Native: Create beautiful mobile apps with JavaScript and React Native",
   publishing_year: 2019,
-  author: "Devin Abbott",
+  author: "Devin Abbott"
 })
-book8.image.attach(io: File.open("https://images-na.ssl-images-amazon.com/images/I/51071Pm5H7L._SX404_BO1,204,203,200_.jpg",filename: "imagebook8.jpg")
+book8.user = user_6
+book8.image.attach(io: File.open("https://images-na.ssl-images-amazon.com/images/I/51071Pm5H7L._SX404_BO1,204,203,200_.jpg"),filename: "imagebook8.jpg")
+book8.save!
 
-book9 = Book.new ({
-  user: user_6,
+book9 = Book.new({
   category_id: categories.sample,
   title: "Computer Networking: A Top-Down Approach, 7th Edition",
   publishing_year: 2016,
-  author: "Kurose Ross",
+  author: "Kurose Ross"
 })
-book9.image.attach(io: File.open("https://images-na.ssl-images-amazon.com/images/I/51xp1%2BoDRML._SX402_BO1,204,203,200_.jpg",filename: "imagebook9.jpg")
+book9.user = user_6
+book9.image.attach(io: File.open("https://images-na.ssl-images-amazon.com/images/I/51xp1%2BoDRML._SX402_BO1,204,203,200_.jpg"),filename: "imagebook9.jpg")
+book9.save!
 
-book10 = Book.new ({
-  user: user_6,
+book10 = Book.new({
   category_id: categories.sample,
   title: "Make: Arduino Bots and Gadgets: Six Embedded Projects with Open Source Hardware and Software",
   publishing_year: 2011,
-  author: "Tero Kervinen",
+  author: "Tero Kervinen"
 })
-book10.image.attach(io: File.open("https://images-eu.ssl-images-amazon.com/images/I/51c5QnQTEZL.jpg",filename: "imagebook10.jpg")
+book10.user = user_6
+book10.image.attach(io: File.open("https://images-eu.ssl-images-amazon.com/images/I/51c5QnQTEZL.jpg"),filename: "imagebook10.jpg")
+book10.save!
 
-book11 = Book.new ({
-  user: user_6,
+book11 = Book.new({
   category_id: categories.sample,
   title: "AI Superpowers: China, Silicon Valley, and the New World Order",
   publishing_year: 2018,
-  author: "Kai-fu Lee",
+  author: "Kai-fu Lee"
 })
-book11.image.attach(io: File.open("https://s.s-bol.com/imgbase0/imagebase3/large/FC/6/7/7/9/9200000091699776.jpg",filename: "imagebook11.jpg")
+book11.user = user_6
+book11.image.attach(io: File.open("https://s.s-bol.com/imgbase0/imagebase3/large/FC/6/7/7/9/9200000091699776.jpg"),filename: "imagebook11.jpg")
+book11.save!
 
-book12 = Book.new ({
-  user: user_6,
+book12 = Book.new({
   category_id: categories.sample,
   title: "Introduction to the Math of Neural Networks",
   publishing_year: 2012,
-  author: "Jeff Heaton",
+  author: "Jeff Heaton"
 })
-book12.image.attach(io: File.open("https://images-eu.ssl-images-amazon.com/images/I/51o%2B7BRJ45L.jpg",filename: "imagebook12.jpg")
+book12.user = user_6
+book12.image.attach(io: File.open("https://images-eu.ssl-images-amazon.com/images/I/51o%2B7BRJ45L.jpg"),filename: "imagebook12.jpg")
+book12.save!
 
-book13 = Book.new ({
-  user: user_6,
+book13 = Book.new({
   category_id: categories.sample,
   title: "Artificial Intelligence for Humans, Volume 3: Deep Learning and Neural Networks ",
   publishing_year: 2015,
-  author: "Jeff Heaton",
+  author: "Jeff Heaton"
 })
-book13.image.attach(io: File.open("https://images-na.ssl-images-amazon.com/images/I/51cAXV2e6LL._SX402_BO1,204,203,200_.jpg",filename: "imagebook13.jpg")
+book13.user = user_6
+book13.image.attach(io: File.open("https://images-na.ssl-images-amazon.com/images/I/51cAXV2e6LL._SX402_BO1,204,203,200_.jpg"),filename: "imagebook13.jpg")
+book13.save!
 
-book14 = Book.new ({
-  user: user_6,
+book14 = Book.new({
   category_id: categories.sample,
   title: "The Illustrated Network: How TCP/IP Works in a Modern Network",
   publishing_year: 2017,
-  author: "Walter Goralski",
+  author: "Walter Goralski"
 })
-book14.image.attach(io: File.open("https://images-na.ssl-images-amazon.com/images/I/51-M9b-plTL._SX404_BO1,204,203,200_.jpg",filename: "imagebook14.jpg")
+book14.user = user_6
+book14.image.attach(io: File.open("https://images-na.ssl-images-amazon.com/images/I/51-M9b-plTL._SX404_BO1,204,203,200_.jpg"),filename: "imagebook14.jpg")
+book14.save!
 
-book15 = Book.new ({
-  user: user_6,
+book15 = Book.new({
   category_id: categories.sample,
   title: "Back-end Perfomance ",
   publishing_year: 2017,
-  author: "Bruno Skvorc",
+  author: "Bruno Skvorc"
 })
-book15.image.attach(io: File.open("https://images-eu.ssl-images-amazon.com/images/I/416QmUkdrWL.jpg",filename: "imagebook15.jpg")
-
+book15.user = user_6
+book15.image.attach(io: File.open("https://images-eu.ssl-images-amazon.com/images/I/416QmUkdrWL.jpg"),filename: "imagebook15.jpg")
+book15.save!
 # books = Book.all
 
 puts 'Creating awesome domains...'
