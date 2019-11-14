@@ -8,7 +8,7 @@ class ReviewsController < ApplicationController
     @book = Book.find(params[:book_id])
     authorize @review = @book.reviews.new(review_params)
     @review.save!
-    redirect_to book_path(@book)
+    redirect_to domain_book_path(@book)
   end
 
   def edit
@@ -32,6 +32,6 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:content, :author, :book_id)
+    params.require(:review).permit(:content, :author, :book_id, :domain_id)
   end
 end

@@ -15,24 +15,24 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-     <!--  <% if user_signed_in? %>
-          <%= link_to "All Books", books_path, class: "nav-link" %>
-      <% else %>
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+     <%# if user_signed_in? %>
+          <%#= link_to "All Books", domain_books_path, class: "nav-link" %>
+      <%# else %>
+          <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
         </li>
 
-      <% end %> -->
+      <%# end %>
     </ul>
   </div>
   <form class="form-inline">
-    <%= form_tag books_path, method: :get do %>
-      <%= text_field_tag :query,
+    <%#= form_tag domain_books_path, method: :get do %>
+      <%#= text_field_tag :query,
         params[:query],
         class: "form-control",
         placeholder: "Find a book"
       %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
-    <% end %>
+      <%#= submit_tag "Search", class: "btn btn-primary" %>
+    <%# end %>
   </form>
   <div class="avatar-spot">
     <% if user_signed_in? %>
