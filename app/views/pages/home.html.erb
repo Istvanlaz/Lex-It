@@ -1,6 +1,8 @@
 
       <div class="container-landing">
-        <%= image_tag("background_image_landing_page.jpeg", alt: "alttext") %>
+        <div class="bg_landing">
+          <%= image_tag("background_image_landing_page.jpeg", alt: "alttext") %>
+        </div>
         <div class="signup">
           <%= render "devise/registrations/new" %>
         </div>
