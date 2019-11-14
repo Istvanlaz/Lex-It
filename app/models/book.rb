@@ -8,6 +8,7 @@ class Book < ApplicationRecord
   validates :publishing_year, presence: true
   # validate :resume_attached?
   validates :resume, attached: true, content_type: :pdf
+  mount_uploader :image, PhotoUploader
 
   belongs_to :user
 

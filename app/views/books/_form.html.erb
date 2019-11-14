@@ -3,5 +3,7 @@
   <%= f.input :author %>
   <%= f.input :publishing_year %>
   <%= f.input :resume, required: true %>
+  <%= f.input :image %>
+  <%= f.input :image_cache, as: :hidden %>
   <%= f.submit "Submit", class: "btn btn-primary" %>
 <% end %>

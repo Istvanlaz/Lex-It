@@ -5,7 +5,7 @@
           <div class="row">
             <% @books.first(8).each do |book| %>
              <div class="card d-flex flex-column align-items-center istvan">
-                <img class= "image-card" src="https://softcover.s3.amazonaws.com/636/ruby_on_rails_tutorial_6th_edition/images/cover-web.png" alt="book-cover" style="width:250px;height:200px;">
+                <%= cl_image_tag book.image, height: 200, width: 250, crop: :fill %>
               <div class="card-book-info d-flex flex-row justify-content-between align-items-center">
                 <div class="d-flex flex-column justify-content-start card-infos">
                   <h2 class="card-book-title"><%= book.title %></h2>

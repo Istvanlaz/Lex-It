@@ -1,5 +1,17 @@
-<% @domains.each do |domain| %>
-  <%= domain.image %>
-  <%= domain.name %>
-  <br>
-<% end %>
+<div class="card-domain">
+  <%= link_to "Library", books_path %>
+  <%= cl_image_tag("bg_library",
+        width: 300, height: 300, crop: :fill, class: 'domain_pic') %>
+</div>
+
+<div class="card-domain">
+  <%= link_to "News", books_path %>
+  <%= cl_image_tag("bubble_news",
+        width: 300, height: 300, crop: :fill, class: 'domain_pic') %>
+</div>
+
+<div class="card-domain">
+  <%= link_to "Class Notes", books_path %>
+  <%= cl_image_tag("bg_notes",
+        width: 300, height: 300, crop: :fill, class: 'domain_pic') %>
+</div>
