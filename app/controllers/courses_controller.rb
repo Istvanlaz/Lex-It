@@ -1,6 +1,10 @@
 class CoursesController < ApplicationController
   def index
-    @courses = policy_scope(Course).select { |course| course.domain_id == params[:domain_id].to_i }
+    if params[:query]
+      @courses = policy_scope(Course).search(params[:query])
+    else
+      @courses = policy_scope(Course)
+    end
   end
 
   def show
