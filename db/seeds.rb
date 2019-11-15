@@ -459,7 +459,7 @@ classnote0.save!
 
 classnote1 = ClassNote.new({
   user_id: user_2.id,
-  course: course_2,
+  course: course_1,
   title: "SQL Median",
   author: "Me, Myself and Irene",
   click_counter: 4
@@ -470,7 +470,7 @@ classnote1.save!
 
 classnote2 = ClassNote.new({
   user_id: user_2.id,
-  course: course_3,
+  course: course_1,
   title: "Building Awesome DBs",
   author: "Me, Myself and Irene",
   click_counter: 4
@@ -482,7 +482,7 @@ classnote2.save!
 
 classnote3 = ClassNote.new({
   user_id: user_2.id,
-  course: course_4,
+  course: course_2,
   title: "SQL for Pros!!",
   author: "Me, Myself and Irene",
   click_counter: 4
@@ -495,7 +495,7 @@ classnote3.save!
 
 classnote4 = ClassNote.new({
   user_id: user_2.id,
-  course: course_5,
+  course: course_3,
   title: "Front is not made for bitches",
   author: "Me, Myself and Irene",
   click_counter: 4
@@ -516,6 +516,138 @@ classnote5.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
 
 classnote5.remote_image_url = File.join(__dir__, 'courses/note_js.jpg')
 classnote5.save!
+
+classnote6 = ClassNote.new({
+  user_id: user_2.id,
+  course: course_1,
+  title: "SQL Advanced",
+  author: "Laureen",
+  click_counter: 4
+})
+classnote6.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
+classnote6.remote_image_url = File.join(__dir__, 'courses/notes_dat2.jpg')
+classnote6.save!
+
+classnote7 = ClassNote.new({
+  user_id: user_2.id,
+  course: course_1,
+  title: "DataBases 2.0",
+  author: "Bob Dylan",
+  click_counter: 4
+})
+classnote7.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
+classnote7.remote_image_url = File.join(__dir__, 'courses/notes_dat3.jpg')
+classnote7.save!
+
+classnote8 = ClassNote.new({
+  user_id: user_2.id,
+  course: course_4,
+  title: "Getting a perfect Front",
+  author: "John Lennon",
+  click_counter: 4
+})
+classnote8.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
+classnote8.remote_image_url = File.join(__dir__, 'courses/note_front2.jpg')
+classnote8.save!
+
+classnote9 = ClassNote.new({
+  user_id: user_2.id,
+  course: course_4,
+  title: "Front Cracking",
+  author: "Irene",
+  click_counter: 4
+})
+classnote9.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
+classnote9.remote_image_url = File.join(__dir__, 'courses/note_front_end1.jpg')
+classnote9.save!
+
+classnote10 = ClassNote.new({
+  user_id: user_2.id,
+  course: course_4,
+  title: "Front 2.0",
+  author: "Georges",
+  click_counter: 4
+})
+classnote10.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
+classnote10.remote_image_url = File.join(__dir__, 'courses/note_js.jpg')
+classnote10.save!
+
+classnote11 = ClassNote.new({
+  user_id: user_2.id,
+  course: course_5,
+  title: "Javascript Pro xl",
+  author: "Irene",
+  click_counter: 4
+})
+classnote11.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
+classnote11.remote_image_url = File.join(__dir__, 'courses/note_sql.jpg')
+classnote11.save!
+
+classnote12 = ClassNote.new({
+  user_id: user_2.id,
+  course: course_5,
+  title: "JS iz da best",
+  author: "Luke Skywalker",
+  click_counter: 4
+})
+classnote12.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
+classnote12.remote_image_url = File.join(__dir__, 'courses/note_backend.jpg')
+classnote12.save!
+
+classnote13 = ClassNote.new({
+  user_id: user_2.id,
+  course: course_5,
+  title: "Differences Java vs JS?",
+  author: "Lex Luthor",
+  click_counter: 4
+})
+classnote13.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
+classnote13.remote_image_url = File.join(__dir__, 'courses/note_python.jpg')
+classnote13.save!
+
+classnote14 = ClassNote.new({
+  user_id: user_2.id,
+  course: course_5,
+  title: "Java is not a Star Wars character",
+  author: "Obiwan",
+  click_counter: 4
+})
+classnote14.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
+classnote14.remote_image_url = File.join(__dir__, 'courses/notes_dat3.jpg')
+classnote14.save!
+
+classnote15 = ClassNote.new({
+  user_id: user_2.id,
+  course: course_5,
+  title: "Java for Noobs",
+  author: "Lord Anton",
+  click_counter: 4
+})
+classnote15.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
+classnote15.remote_image_url = File.join(__dir__, 'courses/notes_dat2.jpg')
+classnote15.save!
+
+classnote16 = ClassNote.new({
+  user_id: user_2.id,
+  course: course_5,
+  title: "What YOU need to know on Java",
+  author: "Georges Clooney",
+  click_counter: 4
+})
+classnote16.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
+classnote16.remote_image_url = File.join(__dir__, 'courses/notes_dat1.jpg')
+classnote16.save!
+
+classnote17 = ClassNote.new({
+  user_id: user_2.id,
+  course: course_4,
+  title: "Front End for real Cracks",
+  author: "Margotte",
+  click_counter: 4
+})
+classnote17.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
+classnote17.remote_image_url = File.join(__dir__, 'courses/note_front_end1.jpg')
+classnote17.save!
 
 # class_notes = ClassNote.all
 
