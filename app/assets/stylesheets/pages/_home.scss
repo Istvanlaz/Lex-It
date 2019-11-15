@@ -1,17 +1,3 @@
-.container-banner {
-  height: 91vh;
-  width: 100%;
-}
-
-.container-banner img {
-  display: block;
-  object-fit: cover;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-  width: 100%;
-}
 
 .title-ban {
   display: block;
@@ -36,5 +22,6 @@
 }
 
 .bg_landing img {
-  width: 100vw;
+  max-width: 100%;
 }
+

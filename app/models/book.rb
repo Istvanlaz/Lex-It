@@ -1,7 +1,6 @@
 class Book < ApplicationRecord
   has_many :ratings, dependent: :destroy
   has_one_attached :resume
-  has_one_attached :image
   has_many :reviews, dependent: :destroy
   validates :title, presence: true
   validates :author, presence: true
@@ -10,7 +9,9 @@ class Book < ApplicationRecord
   validates :resume, attached: true, content_type: :pdf
   mount_uploader :image, PhotoUploader
 
+  belongs_to :domain
   belongs_to :user
+  searchkick word_middle: [:name]
 
   def average_rating
     return 0 if ratings.empty?

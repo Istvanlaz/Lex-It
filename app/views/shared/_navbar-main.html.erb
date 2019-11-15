@@ -21,16 +21,8 @@
 
     <div class="avatar-spot">
 
-      <form class="form-inline">
-      <%#= form_tag domain_books_path, method: :get do %>
-        <%#= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find a book"
-        %>
-        <%#= submit_tag "Search", class: "btn btn-primary" %>
-      <%# end %>
-    </form>
+
+          <%= controller_name %>
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false  %>
 
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

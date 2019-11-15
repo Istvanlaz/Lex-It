@@ -47,7 +47,9 @@ ActiveRecord::Schema.define(version: 2019_11_15_112020) do
     t.string "image"
     t.bigint "user_id"
     t.bigint "reading_list_id"
+    t.bigint "domain_id"
     t.index ["category_id"], name: "index_books_on_category_id"
+    t.index ["domain_id"], name: "index_books_on_domain_id"
     t.index ["reading_list_id"], name: "index_books_on_reading_list_id"
     t.index ["user_id"], name: "index_books_on_user_id"
   end
@@ -129,7 +131,6 @@ ActiveRecord::Schema.define(version: 2019_11_15_112020) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "user_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", default: "", null: false
