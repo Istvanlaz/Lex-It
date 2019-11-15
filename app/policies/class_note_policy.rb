@@ -4,4 +4,8 @@ class ClassNotePolicy < ApplicationPolicy
       scope.all
     end
   end
+
+  def my_notes?
+    true
+  end
 end

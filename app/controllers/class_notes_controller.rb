@@ -10,4 +10,9 @@ class ClassNotesController < ApplicationController
 
   def edit
   end
+
+  def my_notes
+    @notes = current_user.class_notes
+    authorize @notes
+  end
 end
