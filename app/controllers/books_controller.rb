@@ -5,6 +5,7 @@ class BooksController < ApplicationController
   def index
     if params[:query].present?
       sql_query = "title ILIKE :query OR author ILIKE :query"
+      # we are going to refactor it when we will do the global search
       @books = Book.where(sql_query, query: "%#{params[:query]}%")
     else
       @books = policy_scope(@domain.books).order(created_at: :desc)

@@ -11,6 +11,7 @@ class Book < ApplicationRecord
 
   belongs_to :domain
   belongs_to :user
+  searchkick word_middle: [:name]
 
   def average_rating
     return 0 if ratings.empty?
