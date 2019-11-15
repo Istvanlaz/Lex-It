@@ -1,0 +1,120 @@
+.syllabus-container{
+  position: relative;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 10px;
+  background: #E7EAF6;
+}
+
+.all-notes{
+  overflow: scroll;
+  width: 100%;
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-size: cover;
+}
+
+.content a {
+  color: white;
+  text-decoration: none;
+}
+
+.notes{
+  position: absolute;
+  padding: 1vw;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.active{
+  visibility: visible;
+  opacity: 1;
+}
+
+.courses{
+
+}
+
+.course-card{
+  padding: 10px;
+  margin: 10px;
+  font-size: 1.7vw;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgb(10, 10, 10);
+  &:hover{
+    font-weight: 800;
+    box-shadow: 0px 0px 8px -2px black;
+  }
+}
+
+.note{
+  padding: 10px;
+  width: 25vw;
+  height: 400px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: 3fr 2fr;
+  margin: 10px;
+  background: #E7EAF6;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgb(10, 10, 10);
+}
+
+.note-preview{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.note-preview img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.note-details{
+  background: green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+}
+
+.note-author{
+  // background: purple;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.author-detail{
+  margin-left: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  padding: 3px;
+  h3{
+    font-size: 2vw;
+    margin: 0;
+  }
+  p{
+    font-size: 1vw;
+    margin: 0;
+  }
+}
+
+.note-bottom {
+  display: grid;
+  grid-gap: 10px;
+}

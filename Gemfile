@@ -14,7 +14,7 @@ gem 'redis'
 gem 'cloudinary', '~> 1.9.1'
 gem 'pundit'
 gem 'active_storage_validations'
-
+gem 'pdf_meta'
 
 gem 'autoprefixer-rails'
 gem 'devise'
