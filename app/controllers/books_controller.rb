@@ -1,14 +1,15 @@
 class BooksController < ApplicationController
   skip_after_action :verify_authorized, except: :index, unless: :skip_pundit?
   skip_after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
-
+  before_action :set_domain
   def index
     if params[:query].present?
       sql_query = "title ILIKE :query OR author ILIKE :query"
       @books = Book.where(sql_query, query: "%#{params[:query]}%")
     else
-      @books = policy_scope(Book).order(created_at: :desc)
+      @books = policy_scope(@domain.books).order(created_at: :desc)
     end
+    p @books
   end
 
   def show
@@ -52,6 +53,10 @@ class BooksController < ApplicationController
   end
 
   private
+
+  def set_domain
+    @domain = Domain.find params[:domain_id]
+  end
 
   def book_params
     params.require(:book).permit(:title, :author, :publishing_year, :resume, :user, :image, :domain_id)
