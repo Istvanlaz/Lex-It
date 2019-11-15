@@ -4,5 +4,5 @@ class Course < ApplicationRecord
   has_many :registrations, dependent: :destroy
 
   mount_uploader :image, PhotoUploader
-  searchkick
+  searchkick word_middle: [:name]
 end
