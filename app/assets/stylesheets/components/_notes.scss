@@ -1,0 +1,97 @@
+.syllabus-container{
+  position: relative;
+  height: 100vh;
+  display: flex;
+}
+
+.notes{
+  position: absolute;
+  width: 75vw;
+  background: orange;
+  padding: 1vw;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.active{
+  visibility: visible;
+  opacity: 1;
+}
+
+.courses{
+  width: 25%;
+  background: pink;
+}
+
+.course-card{
+  background: blue;
+  padding: 10px;
+  margin: 10px;
+  font-size: 1.7vw;
+  cursor: pointer;
+  &:hover{
+    font-weight: 800;
+    box-shadow: 0px 0px 8px -2px black;
+  }
+}
+
+.note{
+  padding: 10px;
+  border: 1px solid black;
+  width: 25vw;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: 3fr 2fr;
+}
+
+.note-preview{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.note-preview img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.note-details{
+  background: green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+}
+
+.note-author{
+  background: purple;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.author-detail{
+  margin-left: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  padding: 3px;
+  h3{
+    font-size: 2vw;
+    margin: 0;
+  }
+  p{
+    font-size: 1vw;
+    margin: 0;
+  }
+}
+
+.note-bottom {
+  display: grid;
+  grid-gap: 10px;
+}
