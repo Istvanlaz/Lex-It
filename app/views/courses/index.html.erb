@@ -1,14 +1,36 @@
- <form class="form-inline">
-      <%= form_tag domain_courses_path, method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find a course"
-        %>
-        <%= submit_tag "Search", class: "btn btn-primary" %>
-      <% end %>
+<form class="form-inline">
+  <%= form_tag domain_courses_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a course"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+</form>
 
-    </form>
-<% @courses.each do |course| %>
-  <%= course.name %> <br>
-<% end  %>
+<div class="syllabus-container"
+     data-controller="sliders">
+
+  <div class="courses">
+    <% @courses.each_with_index do |course, index| %>
+      <div class="course-card"
+           data-action="click->sliders#showIt"
+           data-index="<%= index %>">
+        <%= course.name %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="all-notes">
+    <% @courses.each_with_index do |course, index| %>
+
+      <div class="notes"
+           data-target="sliders.notes"
+           data-sliders-index="<%= index %>">
+        <%= render partial: 'courses/note', locals: { course: course } %>
+      </div>
+
+    <% end %>
+  </div>
+</div>

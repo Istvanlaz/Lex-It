@@ -1,0 +1,26 @@
+<% course.class_notes.each do |note| %>
+  <div class="note">
+    <div class="note-preview">
+      <%= cl_image_tag note.image, crop: :fill %>
+    </div>
+    <div class="note-bottom">
+      <div class="note-author">
+        <%= cl_image_tag note.user.avatar, height: 40, width: 40, crop: :fill, class: 'avatar' %>
+        <div class="author-detail">
+          <h3><%= note.title %></h3>
+          <p><%= note.author %></p>
+        </div>
+      </div>
+      <div class="note-details">
+        <div class="note-score">
+          8/10
+        </div>
+        <div class="note-action">
+          <div class="content btn btn-primary"><a>
+            <%= link_to "Read", url_for(note.content) %></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end  %>
