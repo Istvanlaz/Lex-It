@@ -13,11 +13,12 @@
   </head>
     <body>
       <% unless devise_controller? %>
-      <% if user_signed_in? %>
-        <%= render 'shared/navbar-main' %>
-      <% else %>
-        <%= render 'shared/navbar-landing' %>
-      <% end %>
+        <% if user_signed_in? %>
+          <%= render 'shared/navbar-main' %>
+        <% else %>
+          <%= render 'shared/navbar-landing' %>
+        <% end %>
+
 
       <% end %>
       <%= render 'shared/flashes' %>
