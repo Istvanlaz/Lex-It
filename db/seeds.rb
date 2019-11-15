@@ -295,7 +295,7 @@ book10 = Book.new({
   publishing_year: 2011,
   author: "Tero Kervine",
   user_id: user_6.id,
-    domain: domain_1
+    domain: domain_2
 
 })
 
@@ -309,7 +309,7 @@ book11 = Book.new({
   publishing_year: 2018,
   author: "Kai-fu Lee",
   user_id: user_6.id,
-    domain: domain_1
+    domain: domain_3
 
 })
 

@@ -48,7 +48,7 @@
         </div>
         <br>
         <div id="buttons-descr">
-          <p class="btn button-show"><%= link_to "Add a Rating", new_domain_book_rating_path(@book) %></p>
+          <p class="btn button-show"><%= link_to "Add a Rating", new_domain_book_rating_path(@domain, @book) %></p>
         </div>
         <br>
         <div class="reviews-container">
@@ -62,7 +62,7 @@
           <% end %>
         </div>
         <div class="review-form">
-          <%= simple_form_for [@book, @review] do |f| %>
+          <%= simple_form_for [@domain, @book, @review] do |f| %>
             <%= f.input :content %>
             <%= f.submit "Submit", class: "btn btn-primary" %>
           <% end %>
