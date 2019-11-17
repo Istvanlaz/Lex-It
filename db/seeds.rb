@@ -18,25 +18,25 @@ ClassNote.destroy_all
 puts 'Creating awesome categories...'
 
 
-Category.create!({
+category_1 = Category.create!({
   name: "front-end"
 })
-Category.create!({
+category_2 = Category.create!({
   name: "back-end"
 })
-Category.create!({
+category_3 = Category.create!({
   name: "fullstack"
 })
-Category.create!({
+category_4 = Category.create!({
   name: "network"
 })
-Category.create!({
+category_5 = Category.create!({
   name: "machine-learning"
 })
-Category.create!({
+category_6 = Category.create!({
   name: "hardware"
 })
-Category.create!({
+category_7 = Category.create!({
   name: "Articial-Intelligence"
 })
 
@@ -171,7 +171,7 @@ book0 = Book.new({
   publishing_year: 2018,
   author: "Chris Albon",
   user_id: user_6.id,
-  domain: domain_1
+  domain_id: domain_3.id
 })
 book0.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/51TcoYciN6L._SX379_BO1,204,203,200_.jpg"
 book0.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
@@ -183,7 +183,7 @@ book1 = Book.new({
   publishing_year: 2000,
   author: "Jon Bentley",
   user_id: user_6.id,
-    domain: domain_1
+  domain_id: domain_3.id
 
 })
 book1.remote_image_url = 'https://images-na.ssl-images-amazon.com/images/I/5182nSkamwL._SX367_BO1,204,203,200_.jpg'
@@ -196,7 +196,7 @@ book2 = Book.new({
   publishing_year: 1988,
   author: "Jon Bentley",
   user_id: user_6.id,
-    domain: domain_1
+  domain_id: domain_3.id
 
 
 })
@@ -210,7 +210,7 @@ book3 = Book.new({
   publishing_year: 2011,
   author: "Marijn Haver",
   user_id: user_6.id,
-    domain: domain_1
+  domain_id: domain_3.id
 
 
 })
@@ -224,7 +224,7 @@ book4 = Book.new({
   publishing_year: 2014,
   author: "Marijn Haver",
   user_id: user_6.id,
-    domain: domain_1
+  domain_id: domain_3.id
 
 
 })
@@ -238,7 +238,7 @@ book5 = Book.new({
   publishing_year: 2018,
   author: "Marijn Haver",
   user_id: user_6.id,
-    domain: domain_1
+  domain_id: domain_3.id
 
 
 })
@@ -252,7 +252,7 @@ book6 = Book.new({
   publishing_year: 2014,
   author: "Jon Duckket",
   user_id: user_6.id,
-    domain: domain_1
+  domain_id: domain_3.id
 
 
 })
@@ -266,7 +266,7 @@ book7 = Book.new({
   publishing_year: 2018,
   author: "Fany Reynder",
   user_id: user_6.id,
-    domain: domain_1
+  domain_id: domain_3.id
 
 
 })
@@ -280,7 +280,7 @@ book8 = Book.new({
   publishing_year: 2019,
   author: "Devin Abbott",
   user_id: user_6.id,
-    domain: domain_1
+  domain_id: domain_3.id
 
 
 })
@@ -294,7 +294,7 @@ book9 = Book.new({
   publishing_year: 2016,
   author: "Kurose Ross",
   user_id: user_6.id,
-    domain: domain_1
+  domain_id: domain_3.id
 
 })
 
@@ -308,7 +308,7 @@ book10 = Book.new({
   publishing_year: 2011,
   author: "Tero Kervine",
   user_id: user_6.id,
-    domain: domain_2
+  domain_id: domain_3.id
 
 })
 
@@ -322,7 +322,7 @@ book11 = Book.new({
   publishing_year: 2018,
   author: "Kai-fu Lee",
   user_id: user_6.id,
-    domain: domain_3
+  domain_id: domain_4.id
 
 })
 
@@ -336,7 +336,7 @@ book12 = Book.new({
   publishing_year: 2012,
   author: "Jeff Heaton",
   user_id: user_6.id,
-    domain: domain_1
+  domain_id: domain_4.id
 
 
 })
@@ -350,7 +350,7 @@ book13 = Book.new({
   publishing_year: 2015,
   author: "Jeff Heaton",
   user_id: user_6.id,
-    domain: domain_1
+  domain_id: domain_4.id
 
 })
 book13.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/51cAXV2e6LL._SX402_BO1,204,203,200_.jpg"
@@ -364,7 +364,7 @@ book14 = Book.new({
   publishing_year: 2017,
   author: "Walter Goral",
   user_id: user_6.id,
-    domain: domain_1
+  domain_id: domain_3.id
 
 })
 book14.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/51-M9b-plTL._SX404_BO1,204,203,200_.jpg"
@@ -377,7 +377,7 @@ book15 = Book.new({
   publishing_year: 2017,
   author: "Bruno Skvorc",
   user_id: user_6.id,
-    domain: domain_1
+    domain_id: domain_3.id
 
 })
 book15.remote_image_url = "https://images-eu.ssl-images-amazon.com/images/I/416QmUkdrWL.jpg"
@@ -391,42 +391,42 @@ puts 'Creating awesome courses...'
 
 course_1 = Course.new({
   name: "SQL",
-  domain: domain_3
+  domain_id: domain_3.id
 })
 course_1.remote_image_url = File.join(__dir__, 'courses/note_sql.jpg')
 course_1.save!
 
 course_2 = Course.new({
   name: "Back-end Basics",
-  domain: domain_3
+  domain_id: domain_3.id
 })
 course_2.remote_image_url = File.join(__dir__, 'courses/note_backend.jpg')
 course_2.save!
 
 course_3 = Course.new({
   name: "Front-end Basics",
-  domain: domain_3
+  domain_id: domain_3.id
 })
 course_3.remote_image_url = File.join(__dir__, 'courses/note_front_end1.jpg')
 course_3.save!
 
 course_4 = Course.new({
   name: "Front-end Advanced",
-  domain: domain_3
+  domain_id: domain_3.id
 })
 course_4.remote_image_url = File.join(__dir__, 'courses/note_front2.jpg')
 course_4.save!
 
 course_5 = Course.new({
   name: "JavaScript Advanced",
-  domain: domain_3
+  domain_id: domain_3.id
 })
 course_5.remote_image_url = File.join(__dir__, 'courses/note_js.jpg')
 course_5.save!
 
 course_6 = Course.new({
   name: "Python for Pros",
-  domain: domain_3
+  domain_id: domain_3.id
 })
 course_6.remote_image_url = File.join(__dir__, 'courses/note_python.jpg')
 course_6.save!
