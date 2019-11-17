@@ -59,7 +59,7 @@
 .note{
   padding: 10px;
   width: 25vw;
-  height: 400px;
+  height: 450px;
   display: grid;
   grid-gap: 10px;
   grid-template-rows: 3fr 2fr;
@@ -78,13 +78,12 @@
 .note-preview img{
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: 250px;
 }
 
 .note-details{
-  background: green;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 10px;
 
