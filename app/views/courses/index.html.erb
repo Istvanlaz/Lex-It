@@ -20,8 +20,10 @@
       <div class="course-card"
            data-action="click->sliders#showIt"
            data-index="<%= index %>">
+        <%= cl_image_tag course.image, height: 200, width: 200, crop: :fill, class: "course_pic" %>
         <%= course.name %>
       </div>
+
     <% end %>
   </div>
 
