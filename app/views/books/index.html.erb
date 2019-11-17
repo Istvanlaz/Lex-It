@@ -1,37 +1,58 @@
+<div class="searchbar">
+  <form class="form-inline">
+      <%= form_tag domain_courses_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a book"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
+  </form>
+</div>
 <div class="container-main">
   <div class="index_banner d-flex flex-column align-items-center">
+    <div>
        <h1 class="title_library">BOOKS LIBRARY</h1>
-       <div class="container">
-          <div class="row">
-            <% @books.first(8).each do |book| %>
-             <div class="card d-flex flex-column align-items-center istvan">
-                <%= cl_image_tag book.image, height: 200, width: 250, crop: :fill %>
-              <div class="card-book-info d-flex flex-row justify-content-between align-items-center">
-                <div class="d-flex flex-column justify-content-start card-infos">
-                  <h2 class="card-book-title"><%= book.title %></h2>
-                  <div class="christophe d-flex flex-row justify-content-between align-items-center">
-                    <h4 class="card-book-author"><%= book.author %></h4>
-                      <h7 id="star">⭐ <%= book.average_rating %></h7 id="star">
-                    <% if policy(book).show? %>
-                      <p><%= link_to "Details", domain_book_path(params[:domain_id],book), class: 'btn-details' %></p>
-                    <% end %>
-                </div>
+    </div>
+      <div class="container-books">
+        <div class="row">
+          <% @books.first(8).each do |book| %>
+            <div class="card d-flex flex-column align-items-center istvan">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <%= cl_image_tag book.image, height: 380 %>
+                  </div>
+                  <div class="card-book-info d-flex flex-row justify-content-between align-items-center">
+                    <div class="d-flex flex-column justify-content-start card-infos">
+                      <div class="flip-card-back">
+                        <h2 class="card-book-title"><%= book.title %></h2> <br><br>
+                        <div class="christophe d-flex justify-content-between align-items-center">
+                          <h4 class="card-book-author"><%= book.author %></h4><br>
+                          <h7 id="star">⭐ <%= book.average_rating %></h7 id="star">
+                          <% if policy(book).show? %>
+                            <p><%= link_to "Details", domain_book_path(params[:domain_id],book), class: 'btn-details' %></p>
+                          <% end %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-             </div>
-            <% end %>
-          </div>
+            </div>
+          <% end %>
+          <% if policy(Book).new? %>
+            <%= link_to "Create a New Book?", new_domain_book_path, class: 'btn-details2' %>
+          <% end %>
+        </div>
+    </div>
+
+    <% if !flash[:notice].blank? %>
+       <div class = "alert alert-info">
+          <%= flash[:notice] %>
        </div>
-       <% if policy(Book).new? %>
-          <%= link_to "Create a New Book?", new_domain_book_path, class: 'btn-details2' %>
-       <% end %>
+    <% end %>
   </div>
-
-  <% if !flash[:notice].blank? %>
-     <div class = "alert alert-info">
-        <%= flash[:notice] %>
-     </div>
-
-  <% end %>
-
 </div>
+
