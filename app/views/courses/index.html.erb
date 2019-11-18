@@ -19,7 +19,7 @@
     <div class="new-course-card"
          data-action="click->sliders#showIt"
          data-index="0">
-      <i class="new-course fas fa-plus-circle"></i>
+          <i class="new-course fas fa-plus-circle"></i>
     </div>
     <% @courses.each_with_index do |course, index| %>
       <div class="course-card"
@@ -31,9 +31,7 @@
         <div class="course-name">
           <%= course.name %>
         </div>
-
       </div>
-
     <% end %>
   </div>
 
@@ -41,7 +39,7 @@
         <div class="notes"
            data-target="sliders.notes"
            data-sliders-index="0">
-           liste mdsiqhjfmqosdijf
+        <%= render partial: 'courses/new', locals: {courses: @courses} %>
       </div>
 
     <% @courses.each_with_index do |course, index| %>
