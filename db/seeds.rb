@@ -111,7 +111,7 @@ user_8 = User.create!( {
 
 puts 'Creating awesome books...'
 
-path = File.join(__dir__, 'seed_pdf.pdf')
+path = File.join(__dir__, '')
 
 puts 'Creating awesome domains...'
 
