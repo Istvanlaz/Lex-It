@@ -10,6 +10,8 @@
 .courses {
   overflow: scroll;
   box-shadow: 1px 1px 9px grey;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 
@@ -17,7 +19,7 @@
   overflow: scroll;
   width: 100%;
   position: relative;
-  background: #E7EAF6;
+  background: #d7c79e;
   box-shadow: 1px 1px 9px grey;
 }
 
@@ -59,17 +61,17 @@
 .course-card{
   position: relative;
   color: #E7EAF6;
-  height: 250px;
-  width: 250px;
+  height: 15vw;
+  width: 15vw;
   margin: 10px;
   font-size: 1.7vw;
   cursor: pointer;
-  filter: brightness(0.6) contrast(1.3);
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgb(10, 10, 10);
   &:hover{
     text-decoration: underline;
     font-weight: medium;
+    border-radius: 5px;
     box-shadow: 0px 0px 8px -2px black;
   }
 }
@@ -78,6 +80,7 @@
   position: absolute;
   cursor: pointer;
   border-radius: 5px;
+  filter: brightness(0.8) contrast(1.3);
   top: 0;
   left: 0;
   height: 100%;
@@ -107,8 +110,8 @@
   position: relative;
   color: #E7EAF6;
   text-shadow: 2px 2px 15px #000;
-  height: 250px;
-  width: 250px;
+  height: 15vw;
+  width: 15vw;
   margin: 10px;
   font-size: 1.7vw;
   cursor: pointer;
@@ -118,6 +121,7 @@
     text-decoration: none;
     font-weight: medium;
     text-shadow: 2px 2px 7px #000;
+    border-radius: 5px;
     box-shadow: 0px 0px 8px -2px black;
   }
 }
@@ -129,6 +133,7 @@
   height: 100%;
   width: 100%;
   display: flex;
+  border-radius: 5px;
   justify-content: center;
   align-items: center;
   &:hover {
