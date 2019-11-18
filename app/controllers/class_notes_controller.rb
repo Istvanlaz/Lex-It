@@ -49,4 +49,9 @@ class ClassNotesController < ApplicationController
   def class_note_params
     params.require(:class_note).permit(:course_id, :user_id, :title, :author, :click_counter, :image, :domain_id)
   end
+
+  def my_notes
+    @notes = current_user.class_notes
+    authorize @notes
+  end
 end
