@@ -1,4 +1,9 @@
-
+.domains-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px;
+  background-color: #D7C79E;
+}
 .container-domain h1 {
   color: red;
   position: absolute;
@@ -10,8 +15,28 @@
   border-radius: 50%;
 }
 
+.domain_pic :hover {
+  filter: brightness(0.6) contrast(1.3);
+}
+
 .card-domain {
+  margin: 20px;
   position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.card-domain img {
+  box-shadow: 2px 2px 18px #000;
+}
+
+.card-domain :hover {
+  color: #E7EAF6;
+  text-decoration: underline;
+}
+
+.card-domain :hover {
+  bottom: 2px;
 }
 
 .card-domain a {

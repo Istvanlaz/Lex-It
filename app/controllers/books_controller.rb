@@ -1,14 +1,16 @@
 class BooksController < ApplicationController
   skip_after_action :verify_authorized, except: :index, unless: :skip_pundit?
   skip_after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
-
+  before_action :set_domain
   def index
     if params[:query].present?
       sql_query = "title ILIKE :query OR author ILIKE :query"
+      # we are going to refactor it when we will do the global search
       @books = Book.where(sql_query, query: "%#{params[:query]}%")
     else
-      @books = policy_scope(Book).order(created_at: :desc)
+      @books = policy_scope(@domain.books).order(created_at: :desc)
     end
+    p @books
   end
 
   def show
@@ -19,6 +21,7 @@ class BooksController < ApplicationController
 
   def new
     authorize @book = Book.new
+    set_domain
   end
 
   def edit
@@ -27,9 +30,10 @@ class BooksController < ApplicationController
 
   def create
     authorize @book = Book.new(book_params)
+    @book.domain = @domain
     @book.user = current_user
-    if @book.save
-      redirect_to domain_book_path(@book)
+    if @book.save!
+      redirect_to domain_book_path(@domain.id, @book.id), notice: "Book was saved"
     else
       render :new
     end
@@ -53,7 +57,11 @@ class BooksController < ApplicationController
 
   private
 
+  def set_domain
+    @domain = Domain.find params[:domain_id]
+  end
+
   def book_params
-    params.require(:book).permit(:title, :author, :publishing_year, :resume, :user, :image, :domain_id)
+    params.require(:book).permit(:title, :author, :publishing_year, :resume, :user, :image, :domain_id, :image_cache)
   end
 end

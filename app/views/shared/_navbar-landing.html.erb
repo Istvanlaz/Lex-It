@@ -10,19 +10,6 @@
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-       <!--  <% if user_signed_in? %>
-            <%= link_to "All Books", books_path, class: "nav-link" %>
-        <% else %>
-            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
-
-        <% end %> -->
-      </ul>
-    </div>
     <div class="topnav col-6" style="width : auto;">
 
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -35,29 +22,5 @@
       </div>
         <%= render "devise/shared/links" %>
       <% end %>
-    </div>
-
-    <div class="avatar-spot">
-      <% if user_signed_in? %>
-      <form class="form-inline">
-      <%= form_tag domain_books_path, method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find a book"
-        %>
-        <%= submit_tag "Search", class: "btn btn-primary" %>
-      <% end %>
-    </form>
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false  %>
-      <% else %>
-
-      <% end %>
-      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-
-              <%= link_to "Saved", "#", class: "dropdown-item" %>
-              <%= link_to "My Notes", my_notes_path, class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            </div>
     </div>
   </nav>

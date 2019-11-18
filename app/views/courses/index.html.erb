@@ -1,3 +1,57 @@
-<% @courses.each do |course| %>
-  <%= course.name %> <br>
-<% end  %>
+
+<div class="searchbar">
+  <form class="form-inline">
+      <%= form_tag domain_courses_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a course"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
+  </form>
+</div>
+
+<div class="syllabus-container"
+     data-controller="sliders">
+
+  <div class="courses">
+    <div class="new-course-card"
+         data-action="click->sliders#showIt"
+         data-index="0">
+      <i class="new-course fas fa-plus-circle"></i>
+    </div>
+    <% @courses.each_with_index do |course, index| %>
+      <div class="course-card"
+           data-action="click->sliders#showIt"
+           data-index="<%= index+1 %>">
+        <div class="course-img">
+          <%= cl_image_tag course.image, crop: :fill, class: "course_pic" %>
+        </div>
+        <div class="course-name">
+          <%= course.name %>
+        </div>
+
+      </div>
+
+    <% end %>
+  </div>
+
+  <div class="all-notes">
+        <div class="notes"
+           data-target="sliders.notes"
+           data-sliders-index="0">
+           liste mdsiqhjfmqosdijf
+      </div>
+
+    <% @courses.each_with_index do |course, index| %>
+
+      <div class="notes"
+           data-target="sliders.notes"
+           data-sliders-index="<%= index+1 %>">
+        <%= render partial: 'courses/note', locals: { course: course } %>
+      </div>
+
+    <% end %>
+  </div>
+</div>

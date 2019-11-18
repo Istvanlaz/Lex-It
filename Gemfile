@@ -14,14 +14,14 @@ gem 'redis'
 gem 'cloudinary', '~> 1.9.1'
 gem 'pundit'
 gem 'active_storage_validations'
-
+gem 'pdf_meta'
 
 gem 'autoprefixer-rails'
 gem 'devise'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'sassc-rails'
 gem 'simple_form'
-gem 'searchkick', '~> 3.0'
+gem 'searchkick', '~> 4.0.2'
 gem 'uglifier'
 gem 'webpacker'
 gem 'dotenv-rails', groups: [:development, :test]
