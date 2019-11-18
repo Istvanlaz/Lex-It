@@ -2,13 +2,18 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 20px;
-  background-color: #D7C79E;
+  background-color: #d7c79e;
 }
 .container-domain h1 {
   color: red;
   position: absolute;
   display: flex;
+  background-color: #d7c79e;
   align-items: flex-start;
+}
+
+.container-domain {
+  background-color: #d7c79e;
 }
 
 .domain_pic {
