@@ -2,6 +2,16 @@
   <div class="note">
     <div class="note-preview">
       <%= cl_image_tag note.image, crop: :fill %>
+      <div class="delete-btn">
+        <%= link_to domain_course_class_note_path(note.course.domain_id, note.course_id, note.id), method: :delete, data: {confirm: 'Are you sure?'} do %>
+          <i class="far fa-times-circle"></i>
+        <% end %>
+      <div class="heart-btn">
+        <%= link_to domain_course_class_note_path(note.course.domain_id, note.course_id, note.id) do %>
+          <i class="far fa-heart"></i>
+        <% end %>
+      </div>
+      </div>
     </div>
     <div class="note-bottom">
       <div class="note-author">

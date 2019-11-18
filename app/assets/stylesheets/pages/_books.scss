@@ -10,7 +10,6 @@
 }
 .title_library{
   color: #3c3c3c;
-  position: absolute;
   top:2%;
   left:18%;
   transform: translate(-50%, -50%);
@@ -177,22 +176,25 @@ height: 695px;
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
+.flip-card-back{
+  height:280px;
+  width:242px;
+  border-radius:5%;
+}
 .flip-card-front, .flip-card-back {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  // backface-visibility: hidden;
+  transform: translateZ(1px);
+  top:0;
+  left:0;
 }
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-
+.flip-card-front img {
+  border-radius:5%;
 }
 .flip-card-back {
   background-color: white;
   color: white;
   transform: rotateY(180deg);
-  height:380px;
+  height:280px;
 }
 .container-books{
   display:grid;
