@@ -161,6 +161,9 @@ domain_6 = Domain.create!({
 domain_6.remote_image_url = File.join(__dir__, 'topics/topic_sciences.jpg')
 domain_6.save!
 
+puts "Done with the domains seeds !"
+
+path = File.join(__dir__, 'seed_pdf.pdf')
 
 puts 'Creating awesome books...'
 
