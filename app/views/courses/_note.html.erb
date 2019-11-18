@@ -2,6 +2,14 @@
   <div class="note">
     <div class="note-preview">
       <%= cl_image_tag note.image, crop: :fill %>
+      <div class="delete-btn">
+        <%= link_to domain_courses_path(note), method: :delete, data: {confirm: 'Are you sure?'} do %>
+          <i class="far fa-times-circle"></i>
+             <!--  method: :delete,
+              data: { confirm: "Are you sure?" } %>
+               -->
+        <% end %>
+      </div>
     </div>
     <div class="note-bottom">
       <div class="note-author">
