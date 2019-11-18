@@ -73,11 +73,11 @@
 
     <div>
       <% if policy(@book).destroy? %>
-          <p class="btn btn-show"><%= link_to "Delete Book", domain_book_path, method: :delete, data: { confirm: "Are you Sure about Deleting this Book?" } %></p>
+          <p class="btn btn-show"><%= link_to "Delete Book", domain_book_path(@book.domain,@book), { method: :delete, data: { confirm: "Are you Sure about Deleting this Book?" } } %></p>
         <% end %>
 
         <% if policy(@book).edit? %>
-          <p class="btn btn-show"><%= link_to "Edit Book", edit_domain_book_path(@book) %></p>
+          <p class="btn btn-show"><%= link_to "Edit Book", edit_domain_book_path(@book.domain, @book) %></p>
       <% end %>
     </div>
 </div>

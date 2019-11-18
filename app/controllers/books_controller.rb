@@ -21,6 +21,7 @@ class BooksController < ApplicationController
 
   def new
     authorize @book = Book.new
+    set_domain
   end
 
   def edit
@@ -29,9 +30,10 @@ class BooksController < ApplicationController
 
   def create
     authorize @book = Book.new(book_params)
+    @book.domain = @domain
     @book.user = current_user
-    if @book.save
-      redirect_to domain_book_path(@book)
+    if @book.save!
+      redirect_to domain_book_path(@domain.id, @book.id), notice: "Book was saved"
     else
       render :new
     end
@@ -60,6 +62,6 @@ class BooksController < ApplicationController
   end
 
   def book_params
-    params.require(:book).permit(:title, :author, :publishing_year, :resume, :user, :image, :domain_id)
+    params.require(:book).permit(:title, :author, :publishing_year, :resume, :user, :image, :domain_id, :image_cache)
   end
 end

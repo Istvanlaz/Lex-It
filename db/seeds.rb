@@ -124,7 +124,7 @@ user_8.save!
 
 puts 'Creating awesome books...'
 
-path = File.join(__dir__, 'seed_pdf.pdf')
+path = File.join(__dir__, '')
 
 puts 'Creating awesome domains...'
 
