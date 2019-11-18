@@ -183,6 +183,7 @@ height: 695px;
 }
 .flip-card-front, .flip-card-back {
   position: absolute;
+  transform: translateZ(1px);
   top:0;
   left:0;
 }
