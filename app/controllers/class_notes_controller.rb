@@ -37,7 +37,7 @@ class ClassNotesController < ApplicationController
   def destroy
     authorize @class_note = ClassNote.find(params[:id])
     @class_note.destroy
-    redirect_to domain_class_notes_path
+    redirect_to domain_courses_path(params[:domain_id])
   end
 
   private
