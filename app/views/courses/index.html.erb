@@ -16,23 +16,39 @@
      data-controller="sliders">
 
   <div class="courses">
+    <div class="new-course-card"
+         data-action="click->sliders#showIt"
+         data-index="0">
+      <i class="new-course fas fa-plus-circle"></i>
+    </div>
     <% @courses.each_with_index do |course, index| %>
       <div class="course-card"
            data-action="click->sliders#showIt"
-           data-index="<%= index %>">
-        <%= cl_image_tag course.image, height: 200, width: 200, crop: :fill, class: "course_pic" %>
-        <%= course.name %>
+           data-index="<%= index+1 %>">
+        <div class="course-img">
+          <%= cl_image_tag course.image, crop: :fill, class: "course_pic" %>
+        </div>
+        <div class="course-name">
+          <%= course.name %>
+        </div>
+
       </div>
 
     <% end %>
   </div>
 
   <div class="all-notes">
+        <div class="notes"
+           data-target="sliders.notes"
+           data-sliders-index="0">
+           liste mdsiqhjfmqosdijf
+      </div>
+
     <% @courses.each_with_index do |course, index| %>
 
       <div class="notes"
            data-target="sliders.notes"
-           data-sliders-index="<%= index %>">
+           data-sliders-index="<%= index+1 %>">
         <%= render partial: 'courses/note', locals: { course: course } %>
       </div>
 
