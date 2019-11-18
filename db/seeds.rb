@@ -122,9 +122,6 @@ user_8.save!
 
 # users = User.all
 
-puts 'Creating awesome books...'
-
-path = File.join(__dir__, '')
 
 puts 'Creating awesome domains...'
 
@@ -164,6 +161,10 @@ domain_6 = Domain.create!({
 domain_6.remote_image_url = File.join(__dir__, 'topics/topic_sciences.jpg')
 domain_6.save!
 
+
+puts 'Creating awesome books...'
+
+path = File.join(__dir__, 'seed_pdf.pdf')
 
 book0 = Book.new({
   category_id: categories.sample,
@@ -377,7 +378,7 @@ book15 = Book.new({
   publishing_year: 2017,
   author: "Bruno Skvorc",
   user_id: user_6.id,
-    domain_id: domain_3.id
+  domain_id: domain_3.id
 
 })
 book15.remote_image_url = "https://images-eu.ssl-images-amazon.com/images/I/416QmUkdrWL.jpg"
