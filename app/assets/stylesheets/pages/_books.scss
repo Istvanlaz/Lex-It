@@ -10,9 +10,7 @@
 }
 .title_library{
   color: #3c3c3c;
-  top:2%;
-  left:18%;
-  transform: translate(-50%, -50%);
+  align-self: center;
   font-family: "Times New Roman", serif;
 }
 // .index_banner {
@@ -203,4 +201,7 @@ height: 695px;
 .istvan{
   background-color: transparent;
   padding: 20px;
+}
+.books-title h1{
+  text-align:center;
 }
