@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'note_ratings/new'
   devise_for :users
   root to: "pages#home"
   get 'my_notes', to: "class_notes#my_notes"
