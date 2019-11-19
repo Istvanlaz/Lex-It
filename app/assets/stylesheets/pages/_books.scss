@@ -159,15 +159,12 @@ height: 695px;
 
 .flip-card {
   background-color: transparent;
-  width: 300px;
-  height: 200px;
-  // perspective: 1000px;
+  height:280px;
+  width:242px;
 }
 .flip-card-inner {
   position: relative;
   width: 100%;
-  height: 100%;
-  text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
@@ -175,15 +172,19 @@ height: 695px;
   transform: rotateY(180deg);
 }
 .flip-card-back{
-  height:280px;
-  width:242px;
   border-radius:5%;
+  padding:12px;
+  display:flex;
+  flex-direction:column;
 }
 .flip-card-front, .flip-card-back {
   position: absolute;
   transform: translateZ(1px);
   top:0;
-  left:0;
+  right:0;
+}
+.flip-card-front{
+  position:relative;
 }
 .flip-card-front img {
   border-radius:5%;
@@ -204,5 +205,18 @@ height: 695px;
   width:300px;
 }
 .books-title h1{
+  text-align:center;
+}
+.row{
+  justify-content:center;
+}
+.book-title{
+  padding: 10px;
+}
+.book-details-and-rating{
+  flex-grow:1;
+  align-items:flex-end;
+}
+.book-author{
   text-align:center;
 }

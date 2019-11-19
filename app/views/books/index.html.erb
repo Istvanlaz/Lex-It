@@ -24,20 +24,16 @@
                   <div class="flip-card-front">
                     <%= cl_image_tag book.image, height: 280, width: 242 %>
                   </div>
-                  <div class="card-book-info d-flex flex-row justify-content-between align-items-center">
-                    <div class="d-flex flex-column justify-content-start card-infos">
-                      <div class="flip-card-back">
-                        <p><h2 class="card-book-title"><%= book.title %></h2></p> <br><br>
-                        <div class="christophe d-flex justify-content-between align-items-center">
-                          <p><h4 class="card-book-author"><%= book.author %></h4></p>
-                          <p><h7 id="star">⭐ <%= book.average_rating %></h7 id="star"></p>
-                          <% if policy(book).show? %>
-                            <p><%= link_to "Details", domain_book_path(params[:domain_id],book), class: 'btn-details' %></p>
-                          <% end %>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="flip-card-back">
+                  <div class="book-title"><h2 class="card-book-title"><%= book.title %></h2></div>
+                  <div class="book-author"><h4 class="card-book-author"><%= book.author %></h4></div>
+                  <div class="book-details-and-rating d-flex justify-content-between">
+                    <h7 id="star">⭐ <%= book.average_rating %></h7 id="star">
+                    <% if policy(book).show? %>
+                      <p><%= link_to "Details", domain_book_path(params[:domain_id],book), class: 'btn-details' %></p>
+                    <% end %>
                   </div>
+                </div>
                 </div>
               </div>
             </div>
