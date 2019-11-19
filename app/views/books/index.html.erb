@@ -29,7 +29,7 @@
                   <div class="book-author"><h4 class="card-book-author"><%= book.author %></h4></div>
                   <div class="book-year"><h4 class="card-book-year"><%= book.publishing_year %></h4></div>
                   <div class="book-details-and-rating d-flex justify-content-between">
-                    <h7 id="star">⭐ <%= book.average_rating %></h7 id="star">
+                    <h7 id="star"><%= book.average_rating %> ⭐</h7 id="star">
                     <% if policy(book).show? %>
                       <p><%= link_to "Details", domain_book_path(params[:domain_id],book), class: 'btn-details' %></p>
                     <% end %>

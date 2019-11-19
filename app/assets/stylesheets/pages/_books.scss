@@ -6,7 +6,7 @@
   background-position: center;
   height: 100%;
   width: 100%;
-  background-color: #d7c79e;
+  background-color: #6f9a8d;
 }
 .title_library{
   color: #3c3c3c;
@@ -63,7 +63,7 @@
   }
 }
 .btn-details2 {
-  margin-top: 50px;
+  margin-top: 15px;
   border-radius: 25px;
   background-color: #ffffff;
   border-style: solid;
@@ -170,6 +170,7 @@ height: 695px;
 }
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
+  box-shadow: 0px 0px 15px white;
 }
 .flip-card-back{
   border-radius:5%;
@@ -212,14 +213,20 @@ height: 695px;
 }
 .book-title{
   padding: 10px;
+  text-align:center;
 }
 .book-details-and-rating{
   flex-grow:1;
   align-items:flex-end;
+  color:black;
 }
 .book-author{
   text-align:center;
+  // font-style:italic;
+  // font-size:20px;
+
 }
 .book-year{
   text-align:center;
+  font-size: 8px;
 }
