@@ -5,6 +5,8 @@ class CoursesController < ApplicationController
     else
       @courses = policy_scope(Course)
     end
+    @class_note = ClassNote.new
+    @domain = Domain.find(params[:domain_id])
   end
 
   def show

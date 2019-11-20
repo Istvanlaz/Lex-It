@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_20_092315) do
+ActiveRecord::Schema.define(version: 2019_11_20_151246) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,6 +91,14 @@ ActiveRecord::Schema.define(version: 2019_11_20_092315) do
     t.string "image"
   end
 
+  create_table "note_ratings", force: :cascade do |t|
+    t.float "value"
+    t.bigint "class_note_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["class_note_id"], name: "index_note_ratings_on_class_note_id"
+  end
+
   create_table "ratings", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -155,6 +163,7 @@ ActiveRecord::Schema.define(version: 2019_11_20_092315) do
   add_foreign_key "class_notes", "courses"
   add_foreign_key "class_notes", "users"
   add_foreign_key "courses", "domains"
+  add_foreign_key "note_ratings", "class_notes"
   add_foreign_key "ratings", "books"
   add_foreign_key "readings", "books"
   add_foreign_key "readings", "users"

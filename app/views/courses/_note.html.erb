@@ -3,11 +3,11 @@
     <div class="note-preview">
       <%= cl_image_tag note.image, crop: :fill %>
       <div class="delete-btn">
-        <%= link_to domain_course_class_note_path(note.course.domain_id, note.course_id, note.id), method: :delete, data: {confirm: 'Are you sure?'} do %>
+        <%= link_to class_note_path(note.id), method: :delete, data: {confirm: 'Are you sure?'} do %>
           <i class="far fa-times-circle"></i>
         <% end %>
       <div class="heart-btn">
-        <%= link_to domain_course_class_note_path(note.course.domain_id, note.course_id, note.id) do %>
+        <%= link_to class_note_path(note.course.domain_id, note.course_id, note.id) do %>
           <i class="far fa-heart"></i>
         <% end %>
       </div>
@@ -17,19 +17,22 @@
       <div class="note-author">
         <%= cl_image_tag note.user.avatar, height: 40, width: 40, crop: :fill, class: 'avatar' %>
         <div class="author-detail">
-          <h3><%= note.title %></h3>
+          <h4><%= note.title %></h4>
           <p><%= note.author %></p>
         </div>
       </div>
       <div class="note-details">
         <div class="note-score">
-          ⭐ -- <%= rand(3..10) %>/10
+          <p>⭐: <%= note.average_note_rating %>/5</p>
         </div>
         <div class="note-action">
           <div class="content btn btn-primary"><a>
             <%= link_to "Read", url_for(note.content) %></a>
           </div>
         </div>
+      </div>
+      <div class="buttons-descr">
+          <p class="btn button-show"><%= link_to "Add a Rating", new_class_note_note_rating_path(note.id) %></p>
       </div>
     </div>
   </div>

@@ -20,6 +20,6 @@ class Book < ApplicationRecord
   end
 
   def resume_attached?
-    return errors.add(:resume, "must add a resume") unless resume.attached?
+    return errors.add(:resume, "Must add a Resume") unless resume.attached?
   end
 end
