@@ -18,7 +18,7 @@ class ClassNotesController < ApplicationController
     authorize @class_note = ClassNote.new(class_note_params)
     @class_note.user = current_user
     if @class_note.save
-      redirect_to domain_courses_path
+      redirect_to domain_courses_path(@class_note.course.domain_id)
     else
       render :new
     end
@@ -37,7 +37,7 @@ class ClassNotesController < ApplicationController
   def destroy
     authorize @class_note = ClassNote.find(params[:id])
     @class_note.destroy
-    redirect_to domain_courses_path(params[:domain_id])
+    redirect_to domain_courses_path(@class_note.course.domain_id)
   end
 
   private
