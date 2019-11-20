@@ -3,7 +3,7 @@ class ClassNotesController < ApplicationController
   end
 
   def show
-    @class_note = ClassNote.find(params[:id])
+    authorize @class_note = ClassNote.find(params[:id])
   end
 
   def new
