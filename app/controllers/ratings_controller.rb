@@ -1,6 +1,6 @@
 class RatingsController < ApplicationController
- skip_after_action :verify_authorized, except: :index, unless: :skip_pundit?
- skip_after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
+  skip_after_action :verify_authorized, except: :index, unless: :skip_pundit?
+  skip_after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
   def new
     @book = Book.find(params[:book_id])
     @rating = Rating.new
@@ -15,7 +15,7 @@ class RatingsController < ApplicationController
     @rating = Rating.new(rating_params)
     @rating.book = @book
     if @rating.save
-      redirect_to domain_book_path(@book)
+      redirect_to domain_book_path(@book.domain, @book)
     else
       render :new
     end

@@ -33,7 +33,7 @@
 .note {
   padding: 10px;
   width: 25vw;
-  height: 450px;
+  height: 530px;
   display: grid;
   grid-gap: 10px;
   grid-template-rows: 3fr 2fr;
@@ -46,7 +46,7 @@
 .note-preview {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .note-preview img {

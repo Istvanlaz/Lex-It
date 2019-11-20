@@ -1,9 +1,9 @@
-class Notenote_ratingsController < ApplicationController
-  skip_after_action :verify_authorized, except: :index, unless: :skip_pundit?
-  skip_after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
+class NoteRatingsController < ApplicationController
+  skip_after_action :verify_authorized, except: [:index, :create], unless: :skip_pundit?
+  skip_after_action :verify_policy_scoped, only: [:index, :create], unless: :skip_pundit?
   def new
-    @class_note = Class_note.find(params[:class_note_id])
-    @note_rating = Note_rating.new
+    @class_note = ClassNote.find(params[:class_note_id])
+    @note_rating = NoteRating.new
   end
 
   def edit
@@ -11,11 +11,11 @@ class Notenote_ratingsController < ApplicationController
   end
 
   def create
-    @class_note = Class_note.find(params[:class_note_id])
-    @note_rating = Note_rating.new(note_rating_params)
-    @note_rating.class_note = @class_note
-    if @note_rating.save
-      redirect_to domain_class_note_path(@class_note)
+    @class_note = ClassNote.find(params[:class_note_id])
+    @note_rating = NoteRating.new(note_rating_params)
+    @note_rating.class_note = ClassNote.find(params[:class_note_id])
+    if @note_rating.save!
+      redirect_to domain_courses_path(@class_note.course_id)
     else
       render :new
     end
@@ -24,6 +24,6 @@ class Notenote_ratingsController < ApplicationController
   private
 
   def note_rating_params
-    params.require(:note_rating).permit(:note_rating, :class_note_id, :domain_id)
+    params.require(:note_rating).permit(:value, :class_note_id, :user_id)
   end
 end
