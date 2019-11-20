@@ -1,17 +1,9 @@
-<% courses.each do |course| %>
-  <div class="course">
-    <div class="course-preview">
-      <%= cl_image_tag course.image, crop: :fill %>
-      <div class="add-btn">
-        <%= link_to new_domain_course_path do %>
-          <i class="add-course fas fa-plus-circle"></i>
-        <% end %>
-      <!-- <div class="heart-btn">
-        <%#= link_to domain_course_class_course_path(course.course.domain_id, course.course_id, course.id) do %>
-          <i class="far fa-heart"></i>
-        <%# end %>
-      </div> -->
-      </div>
-    </div>
-  </div>
-<% end  %>
+<%= simple_form_for [@domain, @course, @class_note] do |f| %>
+  <%= f.input :title %>
+  <%= f.input :author %>
+  <%= f.association :course %>
+  <%= f.input :content, required: true %>
+  <%= f.input :image %>
+  <%= f.input :image_cache, as: :hidden %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>

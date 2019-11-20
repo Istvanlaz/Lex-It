@@ -8,4 +8,8 @@ class ClassNotePolicy < ApplicationPolicy
   def my_notes?
     true
   end
+
+  def create?
+    true
+  end
 end
