@@ -14,12 +14,12 @@ class Book < ApplicationRecord
   searchkick word_middle: [:name]
 
   def average_rating
-    return 0 if ratings.empty?
+    return 'Be the first to rate' if ratings.empty?
 
     (ratings.map(&:rating).sum / ratings.count).round 2
   end
 
   def resume_attached?
-    return errors.add(:resume, "must add an resume") unless resume.attached?
+    return errors.add(:resume, "must add a resume") unless resume.attached?
   end
 end

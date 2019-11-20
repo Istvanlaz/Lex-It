@@ -46,8 +46,16 @@ class ClassNotesController < ApplicationController
     @domain = Domain.find params[:domain_id]
   end
 
+  def add_to_wishlist
+    @book.wishlist = true
+  end
+
+  def wishlist!
+    @class_note.wishlist = true
+  end
+
   def class_note_params
-    params.require(:class_note).permit(:course_id, :user_id, :title, :author, :click_counter, :image, :domain_id)
+    params.require(:class_note).permit(:course_id, :user_id, :title, :author, :click_counter, :image, :domain_id, :wishlist)
   end
 
   def my_notes

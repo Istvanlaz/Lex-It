@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_15_114748) do
+ActiveRecord::Schema.define(version: 2019_11_20_092315) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2019_11_15_114748) do
     t.bigint "user_id"
     t.bigint "reading_list_id"
     t.bigint "domain_id"
+    t.boolean "wishlist"
     t.index ["category_id"], name: "index_books_on_category_id"
     t.index ["domain_id"], name: "index_books_on_domain_id"
     t.index ["reading_list_id"], name: "index_books_on_reading_list_id"
@@ -69,6 +70,7 @@ ActiveRecord::Schema.define(version: 2019_11_15_114748) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image"
+    t.boolean "wishlist"
     t.index ["course_id"], name: "index_class_notes_on_course_id"
     t.index ["user_id"], name: "index_class_notes_on_user_id"
   end
@@ -131,6 +133,7 @@ ActiveRecord::Schema.define(version: 2019_11_15_114748) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "user_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", default: "", null: false

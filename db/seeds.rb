@@ -175,7 +175,8 @@ book0 = Book.new({
   publishing_year: 2018,
   author: "Chris Albon",
   user_id: user_6.id,
-  domain_id: domain_3.id
+  domain_id: domain_3.id,
+  wishlist: true
 })
 book0.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/51TcoYciN6L._SX379_BO1,204,203,200_.jpg"
 book0.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
@@ -187,7 +188,8 @@ book1 = Book.new({
   publishing_year: 2000,
   author: "Jon Bentley",
   user_id: user_6.id,
-  domain_id: domain_3.id
+  domain_id: domain_3.id,
+  wishlist: true
 
 })
 book1.remote_image_url = 'https://images-na.ssl-images-amazon.com/images/I/5182nSkamwL._SX367_BO1,204,203,200_.jpg'
@@ -200,7 +202,8 @@ book2 = Book.new({
   publishing_year: 1988,
   author: "Jon Bentley",
   user_id: user_6.id,
-  domain_id: domain_3.id
+  domain_id: domain_3.id,
+  wishlist: true
 
 
 })
@@ -214,7 +217,8 @@ book3 = Book.new({
   publishing_year: 2011,
   author: "Marijn Haver",
   user_id: user_6.id,
-  domain_id: domain_3.id
+  domain_id: domain_3.id,
+  wishlist: true
 
 
 })
@@ -228,7 +232,8 @@ book4 = Book.new({
   publishing_year: 2014,
   author: "Marijn Haver",
   user_id: user_6.id,
-  domain_id: domain_3.id
+  domain_id: domain_3.id,
+  wishlist: true
 
 
 })
@@ -242,7 +247,8 @@ book5 = Book.new({
   publishing_year: 2018,
   author: "Marijn Haver",
   user_id: user_6.id,
-  domain_id: domain_3.id
+  domain_id: domain_3.id,
+  wishlist: true
 
 
 })
@@ -256,7 +262,8 @@ book6 = Book.new({
   publishing_year: 2014,
   author: "Jon Duckket",
   user_id: user_6.id,
-  domain_id: domain_3.id
+  domain_id: domain_3.id,
+  wishlist: true
 
 
 })
@@ -270,7 +277,8 @@ book7 = Book.new({
   publishing_year: 2018,
   author: "Fany Reynder",
   user_id: user_6.id,
-  domain_id: domain_3.id
+  domain_id: domain_3.id,
+  wishlist: true
 
 
 })
@@ -284,7 +292,8 @@ book8 = Book.new({
   publishing_year: 2019,
   author: "Devin Abbott",
   user_id: user_6.id,
-  domain_id: domain_3.id
+  domain_id: domain_3.id,
+  wishlist: true
 
 
 })
@@ -298,7 +307,8 @@ book9 = Book.new({
   publishing_year: 2016,
   author: "Kurose Ross",
   user_id: user_6.id,
-  domain_id: domain_3.id
+  domain_id: domain_3.id,
+  wishlist: true
 
 })
 
@@ -312,7 +322,8 @@ book10 = Book.new({
   publishing_year: 2011,
   author: "Tero Kervine",
   user_id: user_6.id,
-  domain_id: domain_3.id
+  domain_id: domain_3.id,
+  wishlist: true
 
 })
 
@@ -326,7 +337,8 @@ book11 = Book.new({
   publishing_year: 2018,
   author: "Kai-fu Lee",
   user_id: user_6.id,
-  domain_id: domain_4.id
+  domain_id: domain_4.id,
+  wishlist: true
 
 })
 
@@ -340,7 +352,8 @@ book12 = Book.new({
   publishing_year: 2012,
   author: "Jeff Heaton",
   user_id: user_6.id,
-  domain_id: domain_4.id
+  domain_id: domain_4.id,
+  wishlist: true
 
 
 })
@@ -354,7 +367,8 @@ book13 = Book.new({
   publishing_year: 2015,
   author: "Jeff Heaton",
   user_id: user_6.id,
-  domain_id: domain_4.id
+  domain_id: domain_4.id,
+  wishlist: true
 
 })
 book13.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/51cAXV2e6LL._SX402_BO1,204,203,200_.jpg"
@@ -368,7 +382,8 @@ book14 = Book.new({
   publishing_year: 2017,
   author: "Walter Goral",
   user_id: user_6.id,
-  domain_id: domain_3.id
+  domain_id: domain_3.id,
+  wishlist: true
 
 })
 book14.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/51-M9b-plTL._SX404_BO1,204,203,200_.jpg"
@@ -381,7 +396,8 @@ book15 = Book.new({
   publishing_year: 2017,
   author: "Bruno Skvorc",
   user_id: user_6.id,
-  domain_id: domain_3.id
+  domain_id: domain_3.id,
+  wishlist: true
 
 })
 book15.remote_image_url = "https://images-eu.ssl-images-amazon.com/images/I/416QmUkdrWL.jpg"
