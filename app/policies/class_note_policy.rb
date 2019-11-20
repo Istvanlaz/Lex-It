@@ -12,4 +12,24 @@ class ClassNotePolicy < ApplicationPolicy
   def create?
     true
   end
+
+  def update?
+    true
+  end
+
+  def destroy?
+    true
+  end
+
+  def edit?
+    true
+  end
+
+  def new?
+    true
+  end
+
+  def show?
+    true
+  end
 end

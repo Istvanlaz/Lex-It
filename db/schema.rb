@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_19_164615) do
+ActiveRecord::Schema.define(version: 2019_11_20_151246) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -90,11 +90,10 @@ ActiveRecord::Schema.define(version: 2019_11_19_164615) do
   end
 
   create_table "note_ratings", force: :cascade do |t|
-    t.integer "rating"
+    t.float "value"
+    t.bigint "class_note_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "class_note_id"
-    t.float "note_rating"
     t.index ["class_note_id"], name: "index_note_ratings_on_class_note_id"
   end
 
@@ -140,6 +139,7 @@ ActiveRecord::Schema.define(version: 2019_11_19_164615) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "user_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", default: "", null: false
