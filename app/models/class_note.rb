@@ -1,7 +1,7 @@
 class ClassNote < ApplicationRecord
   belongs_to :user
   belongs_to :course
-  has_many :ratings, dependent: :destroy
+  has_many :note_ratings, dependent: :destroy
   has_one_attached :content
   mount_uploader :image, PhotoUploader
 
