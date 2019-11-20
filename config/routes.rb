@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
   get 'my_notes', to: "class_notes#my_notes"
+  get 'wishlist', to: "pages#wishlist"
+
   resources :class_notes do
     resources :note_ratings, only: [:new, :create]
   end

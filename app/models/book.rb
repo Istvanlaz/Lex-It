@@ -14,7 +14,7 @@ class Book < ApplicationRecord
   searchkick word_middle: [:name]
 
   def average_rating
-    return 0 if ratings.empty?
+    return 'Be the first to rate' if ratings.empty?
 
     (ratings.map(&:rating).sum / ratings.count).round 2
   end

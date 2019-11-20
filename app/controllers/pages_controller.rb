@@ -3,6 +3,14 @@ class PagesController < ApplicationController
   def home
     # write something
   end
+
+  def wishlist
+    @all_wishlist_items = Book.where(wishlist: true)
+    # ClassNotes.where(wishlist: true).each do |note|
+    #   note << @all_wishlist_items
+    # end
+  end
+
   private
 
   def resource_name
