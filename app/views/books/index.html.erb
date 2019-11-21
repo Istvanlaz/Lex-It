@@ -44,6 +44,9 @@
               </div>
             </div>
           <% end %>
+          <br>
+        </div>
+        <div class="book-creation">
           <% if policy(Book).new? %>
             <%= link_to "Create a New Book?", new_domain_book_path, class: 'btn-details2' %>
           <% end %>
