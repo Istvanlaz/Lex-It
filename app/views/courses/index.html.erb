@@ -44,6 +44,9 @@
         <div class="notes"
            data-target="sliders.notes"
            data-sliders-index="0">
+           <div class="bg-new-note">
+             <%= image_tag("banner3.svg", alt: "alttext") %>
+           </div>
         <%= render partial: 'courses/new', locals: {courses: @courses} %>
       </div>
 

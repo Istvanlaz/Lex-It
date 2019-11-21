@@ -2,7 +2,7 @@
   overflow: scroll;
   width: 100%;
   position: relative;
-  background: #6f9a8d;
+  background: #fff4e3;
   box-shadow: 1px 1px 9px grey;
 }
 
@@ -38,7 +38,7 @@
   grid-gap: 10px;
   grid-template-rows: 3fr 2fr;
   margin: 10px;
-  background: #E7EAF6;
+  background: #fff4e3;
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgb(10, 10, 10);
 }
@@ -91,4 +91,16 @@
 .note-bottom {
   display: grid;
   grid-gap: 10px;
+}
+
+.bg-new-note {
+  background-color: #fff;
+  // background-image: asset-url('banner3.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 50px 0;
+}
+.title-new-note h2{
+  color: #3c3c3c;
 }
