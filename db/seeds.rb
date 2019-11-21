@@ -265,22 +265,6 @@ book5.resume.attach(
   )
 book5.save!
 
-book6 = Book.new({
-  category_id: categories.sample,
-  title: "JavaScript and JQuery: Interactive Front–End Web Development",
-  publishing_year: 2014,
-  author: "Jon Duckket",
-  user_id: user_6.id,
-  domain_id: domain_3.id
-
-
-})
-book6.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/41y31M-zcgL._SX400_BO1,204,203,200_.jpg"
-book6.resume.attach(
-  io: File.open(File.join(__dir__, '[Jon_Duckett]_JavaScript_and_JQuery__Interactive_F(z-lib.org).pdf')),
-  filename: '[Jon_Duckett]_JavaScript_and_JQuery__Interactive_F(z-lib.org).pdf'
-  )
-book6.save!
 
 book7 = Book.new({
   category_id: categories.sample,
@@ -526,7 +510,7 @@ classnote0 = ClassNote.new({
   user_id: user_2.id,
   course: course_1,
   title: "SQL Basics",
-  author: "Me, Myself and Irene",
+  author: "Irene",
   click_counter: 4
 })
 classnote0.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
@@ -538,7 +522,7 @@ classnote1 = ClassNote.new({
   user_id: user_2.id,
   course: course_1,
   title: "SQL Median",
-  author: "Me, Myself and Irene",
+  author: "Naruto",
   click_counter: 4
 })
 classnote1.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
@@ -549,7 +533,7 @@ classnote2 = ClassNote.new({
   user_id: user_2.id,
   course: course_1,
   title: "Building Awesome DBs",
-  author: "Me, Myself and Irene",
+  author: "Irene",
   click_counter: 4
 })
 classnote2.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
@@ -561,7 +545,7 @@ classnote3 = ClassNote.new({
   user_id: user_2.id,
   course: course_2,
   title: "SQL for Pros!!",
-  author: "Me, Myself and Irene",
+  author: "Jack",
   click_counter: 4
 })
 
@@ -573,8 +557,8 @@ classnote3.save!
 classnote4 = ClassNote.new({
   user_id: user_2.id,
   course: course_3,
-  title: "Front is not made for bitches",
-  author: "Me, Myself and Irene",
+  title: "Front is not made for noobs",
+  author: "Johnson",
   click_counter: 4
 })
 classnote4.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
@@ -586,7 +570,7 @@ classnote5 = ClassNote.new({
   user_id: user_2.id,
   course: course_6,
   title: "I'm the king of them bananas",
-  author: "Me, Myself and Irene",
+  author: "Gauthiey",
   click_counter: 4
 })
 classnote5.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
@@ -719,7 +703,7 @@ classnote17 = ClassNote.new({
   user_id: user_2.id,
   course: course_4,
   title: "Front End for real Cracks",
-  author: "Margotte",
+  author: "Sacha",
   click_counter: 4
 })
 classnote17.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
