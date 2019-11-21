@@ -7,9 +7,21 @@
 @import "course";
 
 .searchbar{
-  width: fit-content;
-  margin: 0 auto ;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
+
+.search-center {
+  display: flex;
+  justify-content: center;
+  margin-right: 50%;
+}
+
+.search-left {
+  margin-left: 10%;
+}
+
 .form-inline input{
   margin-right: 15px;
 }
