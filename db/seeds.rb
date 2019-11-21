@@ -162,12 +162,9 @@ domain_6.remote_image_url = File.join(__dir__, 'topics/topic_sciences.jpg')
 domain_6.save!
 
 puts "Done with the domains seeds !"
-
-path = File.join(__dir__, 'seed_pdf.pdf')
-
 puts 'Creating awesome books...'
 
-path = File.join(__dir__, 'seed_pdf.pdf')
+#path = File.join(__dir__, '.pdf')
 
 book0 = Book.new({
   category_id: categories.sample,
@@ -179,7 +176,10 @@ book0 = Book.new({
   wishlist: true
 })
 book0.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/51TcoYciN6L._SX379_BO1,204,203,200_.jpg"
-book0.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book0.resume.attach(
+  io: File.open(File.join(__dir__, 'Machine_Learning_with_Python_Cookbook.pdf')),
+  filename: 'Machine_Learning_with_Python_Cookbook.pdf'
+)
 book0.save!
 
 book1 = Book.new({
@@ -193,7 +193,10 @@ book1 = Book.new({
 
 })
 book1.remote_image_url = 'https://images-na.ssl-images-amazon.com/images/I/5182nSkamwL._SX367_BO1,204,203,200_.jpg'
-book1.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book1.resume.attach(
+  io: File.open(File.join(__dir__, 'Jon_Bentley Programming_Pearls.pdf')),
+  filename: 'Jon_Bentley Programming_Pearls.pdf'
+)
 book1.save!
 
 book2 = Book.new({
@@ -208,7 +211,10 @@ book2 = Book.new({
 
 })
 book2.remote_image_url = 'https://images-na.ssl-images-amazon.com/images/I/51OLe7bvBWL._SX336_BO1,204,203,200_.jpg'
-book2.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book2.resume.attach(
+  io: File.open(File.join(__dir__, 'More_Programming_Pearls2nd.pdf')),
+  filename: 'More_Programming_Pearls2nd.pdf'
+)
 book2.save!
 
 book3 = Book.new({
@@ -223,7 +229,10 @@ book3 = Book.new({
 
 })
 book3.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/515jiKSErDL._SX376_BO1,204,203,200_.jpg"
-book3.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book3.resume.attach(
+  io: File.open(File.join(__dir__, 'Marijn_Haverbeke Eloquent_JavaScript.pdf')),
+  filename: 'Marijn_Haverbeke Eloquent_JavaScript.pdf'
+)
 book3.save!
 
 book4 = Book.new({
@@ -238,7 +247,10 @@ book4 = Book.new({
 
 })
 book4.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/515jiKSErDL._SX376_BO1,204,203,200_.jpg"
-book4.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book4.resume.attach(
+  io: File.open(File.join(__dir__, 'Marijn_Haverbeke Eloquent_JavaScript2e.pdf')),
+  filename: 'Marijn_Haverbeke Eloquent_JavaScript2e.pdf'
+)
 book4.save!
 
 book5 = Book.new({
@@ -253,7 +265,10 @@ book5 = Book.new({
 
 })
 book5.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/51-5ZXYtcML._SX377_BO1,204,203,200_.jpg"
-book5.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book5.resume.attach(
+  io: File.open(File.join(__dir__, 'Marijn_Haverbeke Eloquent_JavaScript.pdf')),
+  filename: 'Marijn_Haverbeke Eloquent_JavaScript.pdf'
+  )
 book5.save!
 
 book6 = Book.new({
@@ -268,7 +283,10 @@ book6 = Book.new({
 
 })
 book6.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/41y31M-zcgL._SX400_BO1,204,203,200_.jpg"
-book6.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book6.resume.attach(
+  io: File.open(File.join(__dir__, '[Jon_Duckett]_JavaScript_and_JQuery__Interactive_F(z-lib.org).pdf')),
+  filename: '[Jon_Duckett]_JavaScript_and_JQuery__Interactive_F(z-lib.org).pdf'
+  )
 book6.save!
 
 book7 = Book.new({
@@ -283,7 +301,11 @@ book7 = Book.new({
 
 })
 book7.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/41Nd3IVeklL._SX348_BO1,204,203,200_.jpg"
-book7.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book7.resume.attach(
+  io: File.open(File.join(__dir__, 'Modern_API_Design_with_AS.pdf')),
+  filename: 'Modern_API_Design_with_AS.pdf'
+  )
+
 book7.save!
 
 book8 = Book.new({
@@ -298,7 +320,10 @@ book8 = Book.new({
 
 })
 book8.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/51071Pm5H7L._SX404_BO1,204,203,200_.jpg"
-book8.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book8.resume.attach(
+  io: File.open(File.join(__dir__, 'react[Devin_Abbot,_Houssein_Djirdeh,_Anthony_Accomazzo,(z-lib.org).pdf')),
+  filename: 'react[Devin_Abbot,_Houssein_Djirdeh,_Anthony_Accomazzo,(z-lib.org).pdf'
+  )
 book8.save!
 
 book9 = Book.new({
@@ -313,7 +338,10 @@ book9 = Book.new({
 })
 
 book9.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/51xp1%2BoDRML._SX402_BO1,204,203,200_.jpg"
-book9.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book9.resume.attach(
+  io: File.open(File.join(__dir__, '[James_Kurose,_Keith_Ross]_Computer_Networking__A_(z-lib.org).pdf')),
+  filename: '[James_Kurose,_Keith_Ross]_Computer_Networking__A_(z-lib.org).pdf'
+  )
 book9.save!
 
 book10 = Book.new({
@@ -328,7 +356,9 @@ book10 = Book.new({
 })
 
 book10.remote_image_url = "https://images-eu.ssl-images-amazon.com/images/I/51c5QnQTEZL.jpg"
-book10.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book10.resume.attach(
+  io: File.open(File.join(__dir__, '[Tero_Karvinen,_Kimmo_Karvinen]_Make__Arduino_Bots(z-lib.org).pdf')),
+  filename: '[Tero_Karvinen,_Kimmo_Karvinen]_Make__Arduino_Bots(z-lib.org).pdf')
 book10.save!
 
 book11 = Book.new({
@@ -343,7 +373,9 @@ book11 = Book.new({
 })
 
 book11.remote_image_url = "https://s.s-bol.com/imgbase0/imagebase3/large/FC/6/7/7/9/9200000091699776.jpg"
-book11.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book11.resume.attach(
+  io: File.open(File.join(__dir__, '[Kai-Fu_Lee]_AI_Superpowers__China,_Silicon_Valley(z-lib.org).epub.pdf')),
+  filename: '[Kai-Fu_Lee]_AI_Superpowers__China,_Silicon_Valley(z-lib.org).epub.pdf')
 book11.save!
 
 book12 = Book.new({
@@ -358,7 +390,10 @@ book12 = Book.new({
 
 })
 book12.remote_image_url = "https://images-eu.ssl-images-amazon.com/images/I/51o%2B7BRJ45L.jpg"
-book12.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book12.resume.attach(
+  io: File.open(File.join(__dir__, '[Jeff_Heaton]_Introduction_to_the_Math_of_Neural_N(z-lib.org).pdf')),
+  filename: '[Jeff_Heaton]_Introduction_to_the_Math_of_Neural_N(z-lib.org).pdf'
+  )
 book12.save!
 
 book13 = Book.new({
@@ -372,8 +407,10 @@ book13 = Book.new({
 
 })
 book13.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/51cAXV2e6LL._SX402_BO1,204,203,200_.jpg"
-book13.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
-book13.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book13.resume.attach(
+ io: File.open(File.join(__dir__, '[Jeff_Heaton]_Artificial_Intelligence_for_Humans,_(z-lib.org).pdf')),
+  filename: '[Jeff_Heaton]_Artificial_Intelligence_for_Humans,_(z-lib.org).pdf'
+  )
 book13.save!
 
 book14 = Book.new({
@@ -387,7 +424,10 @@ book14 = Book.new({
 
 })
 book14.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/51-M9b-plTL._SX404_BO1,204,203,200_.jpg"
-book14.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book14.resume.attach(
+  io: File.open(File.join(__dir__, '[Walter_Goralski]_The_Illustrated_Network__How_TCP(z-lib.org).pdf')),
+  filename: '[Walter_Goralski]_The_Illustrated_Network__How_TCP(z-lib.org).pdf'
+  )
 book14.save!
 
 book15 = Book.new({
@@ -401,7 +441,10 @@ book15 = Book.new({
 
 })
 book15.remote_image_url = "https://images-eu.ssl-images-amazon.com/images/I/416QmUkdrWL.jpg"
-book15.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book15.resume.attach(
+  io: File.open(File.join(__dir__, '[Simon_Mackie,__Bruno_Skvorc,_Ralph_Mason,__Alex_W(z-lib.org).pdf')),
+  filename: '[Simon_Mackie,__Bruno_Skvorc,_Ralph_Mason,__Alex_W(z-lib.org).pdf'
+  )
 book15.save!
 # books = Book.all
 
