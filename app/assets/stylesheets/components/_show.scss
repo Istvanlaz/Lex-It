@@ -85,8 +85,30 @@
 }
 
 .buttons-descr {
-  display: flex;
-  justify-content: space-around;
+  padding: 1vw 2vw;
+  background: var(--primary);
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  &:hover{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+}
+
+.rate{
+  padding: 0.3vh 1.5vw;
+  background: var(--yellow);
+  border-radius: 5px;
+  color: white;
+  font-size: 1.2vw;
+  &:hover{
+    background: var(--warning);
+    text-decoration: none;
+    color: white;
+  }
 }
 
 /*Media Queries*/
@@ -204,4 +226,19 @@
   background-repeat: no-repeat;
   background-position: right;
   padding: 50px 0;
+}
+
+.the-canvas{
+  width: 80vw;
+}
+
+.pdf-reader{
+  width: 80vw;
+  padding: 1vw;
+  height: 90vh;
+  overflow: scroll;
+}
+
+.pdf{
+  width: 90%;
 }

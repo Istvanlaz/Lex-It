@@ -25,17 +25,11 @@
       </div>
       <div class="note-details">
         <div class="note-score">
-          <p>⭐: <%= note.average_note_rating %>/5</p>
+          <span>⭐ <%= note.average_note_rating %>/5</span>
         </div>
-        <div class="note-action">
-          <div class="content btn btn-primary"><a>
-            <%= link_to "Read", url_for(note.content) %></a>
-          </div>
-        </div>
+        <%= link_to "+ rating", new_class_note_note_rating_path(note.id), class: "rate" %>
       </div>
-      <div class="buttons-descr">
-          <p class="btn button-show"><%= link_to "Add a Rating", new_class_note_note_rating_path(note.id) %></p>
-      </div>
+      <%= link_to "Read it", class_note_path(note), class: "buttons-descr" %>
     </div>
   </div>
 <% end  %>
