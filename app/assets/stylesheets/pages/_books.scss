@@ -6,7 +6,7 @@
   background-position: center;
   height: 100%;
   width: 100%;
-  background-color: #6f9a8d;
+  // background-color:#eeca98;
 }
 .title_library{
   color: #3c3c3c;
@@ -156,6 +156,7 @@ height: 695px;
 }
 .searchbar{
   padding: 20px;
+  background-color:#eeca98;
 }
 
 .flip-card {
@@ -171,7 +172,7 @@ height: 695px;
 }
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
-  box-shadow: 0px 0px 15px white;
+  box-shadow: 0px 0px 15px #113F67;
 }
 .flip-card-back{
   border-radius:5%;

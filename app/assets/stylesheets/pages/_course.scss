@@ -9,9 +9,10 @@
 
 .courses {
   overflow: scroll;
-  box-shadow: 1px 1px 9px grey;
+  box-shadow: 1px 1px 9px #eeca98;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background-color:#eeca98;
 }
 
 .course-pic{
@@ -37,7 +38,7 @@
     text-decoration: underline;
     font-weight: medium;
     border-radius: 5px;
-    box-shadow: 0px 0px 8px -2px black;
+    box-shadow: 0px 0px 8px -2px #113F67  ;
   }
 }
 
