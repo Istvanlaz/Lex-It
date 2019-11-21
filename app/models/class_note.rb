@@ -1,8 +1,14 @@
 class ClassNote < ApplicationRecord
   belongs_to :user
   belongs_to :course
+
   has_many :note_ratings, dependent: :destroy
+  has_many :savings, dependent: :destroy
+  has_many :wishlists, through: :savings
+
   has_one_attached :content
+
+
   mount_uploader :image, PhotoUploader
 
   validates_associated :course
