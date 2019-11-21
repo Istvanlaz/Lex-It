@@ -46,40 +46,7 @@
 .image-card {
     object-fit: fill;
 }
-.btn-details {
-  margin-top: 4px;
-  border-radius: 25px;
-  background-color: #ffffff;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #E98E5A;
-  padding: 4px 8px;
-  color: #E98E5A;
-  font-size: 12px;
-  &:hover {
-    text-decoration: none!important;
-    background-color: #E98E5A;
-    color: #ffffff;
-  }
-}
-.btn-details2 {
-  margin-top: 15px;
-  border-radius: 25px;
-  background-color: #ffffff;
-  border-style: solid;
-  height: 50px;
-  border-width: 4px;
-  border-color: #113F67;
-  padding: 8px 24px;
-  color: #113F67;
-  font-size:16px;
-  margin-bottom: 28px;
-  &:hover {
-    text-decoration: none!important;
-    background-color: #113F67;
-    color: #ffffff;
-  }
-}
+
 .new-book{
   position: absolute;
   margin-bottom: 0px;
@@ -95,6 +62,7 @@ height: 695px;
 .navbar-brand {
   height: 60px;
 }
+
 .bouton-login {
     background: #0089ff;
     color: #fff!important;

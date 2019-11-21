@@ -1,14 +1,19 @@
 <div class="searchbar">
-  <form class="form-inline">
-      <%= form_tag domain_courses_path, method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find a book"
-        %>
-        <%= submit_tag "Search", class: "btn btn-primary" %>
-      <% end %>
-  </form>
+  <div class="search-left">
+    <p class="btn button-medium-small2"><%= link_to "All books", domain_books_path %></p>
+  </div>
+  <div class="search-center">
+    <form class="form-inline">
+        <%= form_tag domain_courses_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find a book"
+          %>
+          <%= submit_tag "Search", class: "btn btn-primary" %>
+        <% end %>
+    </form>
+  </div>
 </div>
 <div class="container-main">
   <div class="index_banner d-flex flex-column align-items-center">
