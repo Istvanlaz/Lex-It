@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: 10px;
-  background: #E7EAF6;
+  background: #fff4e3;
 }
 
 .courses {
@@ -12,7 +12,7 @@
   box-shadow: 1px 1px 9px #eeca98;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color:#eeca98;
+  background-color:#fff4e3;
 }
 
 .course-pic{
@@ -26,7 +26,7 @@
 
 .course-card{
   position: relative;
-  color: #E7EAF6;
+  color: #fff4e3;
   height: 15vw;
   width: 15vw;
   margin: 10px;
