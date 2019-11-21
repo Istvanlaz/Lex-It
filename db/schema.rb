@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_20_151246) do
+ActiveRecord::Schema.define(version: 2019_11_21_101428) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,7 +48,6 @@ ActiveRecord::Schema.define(version: 2019_11_20_151246) do
     t.bigint "user_id"
     t.bigint "reading_list_id"
     t.bigint "domain_id"
-    t.boolean "wishlist"
     t.index ["category_id"], name: "index_books_on_category_id"
     t.index ["domain_id"], name: "index_books_on_domain_id"
     t.index ["reading_list_id"], name: "index_books_on_reading_list_id"
@@ -139,6 +138,15 @@ ActiveRecord::Schema.define(version: 2019_11_20_151246) do
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
+  create_table "savings", force: :cascade do |t|
+    t.bigint "class_note_id"
+    t.bigint "wishlist_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["class_note_id"], name: "index_savings_on_class_note_id"
+    t.index ["wishlist_id"], name: "index_savings_on_wishlist_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "user_name"
     t.datetime "created_at", null: false
@@ -155,6 +163,13 @@ ActiveRecord::Schema.define(version: 2019_11_20_151246) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "wishlists", force: :cascade do |t|
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_wishlists_on_user_id"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "books", "categories"
   add_foreign_key "books", "reading_lists"
@@ -169,4 +184,7 @@ ActiveRecord::Schema.define(version: 2019_11_20_151246) do
   add_foreign_key "registrations", "courses"
   add_foreign_key "registrations", "users"
   add_foreign_key "reviews", "books"
+  add_foreign_key "savings", "class_notes"
+  add_foreign_key "savings", "wishlists"
+  add_foreign_key "wishlists", "users"
 end
