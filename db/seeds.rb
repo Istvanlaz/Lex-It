@@ -138,7 +138,7 @@ domain_2.remote_image_url = File.join(__dir__, 'topics/topic_law.jpg')
 domain_2.save!
 
 domain_3 = Domain.create!({
-  name: "Coding"
+  name: "Computer Sciences"
 })
 domain_3.remote_image_url = File.join(__dir__, 'topics/topic_coding.jpg')
 domain_3.save!
