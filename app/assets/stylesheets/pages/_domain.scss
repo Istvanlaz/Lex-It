@@ -1,26 +1,30 @@
 .domains-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 20px;
-  background-color: #fff4e3;
+  width: 24%;
+    height: 74vh;
+    padding: 2vw;
+    box-shadow: 4px 0px 9px -7px black;
+    position: relative;
+    -webkit-box-pack: justify;
+    align-items: center;
 }
 .container-domain h1 {
   color: red;
-  position: absolute;
   display: flex;
-  background-color: #fff4e3;
   align-items: flex-start;
+  background-color: #e9ecef;
 }
 .domain-txt h1{
   color: black ;
-  background-color: #fff4e3;
-}
-.domain-txt{
-  background-color: #fff4e3;
+  font-weight: 700;
 }
 
 .container-domain {
-  background-color: #fff4e3;
+  flex-direction: column;
+  background-color: #e9ecef;
+    width: 24%;
+    height: 74vh;
+    padding: 2vw;
+    box-shadow: 4px 0px 9px -7px black;
 }
 
 .domain_pic {
@@ -36,41 +40,32 @@
   position: relative;
   display: flex;
   justify-content: center;
-}
-
-.card-domain img {
-  box-shadow: 2px 2px 18px #000;
-  filter: brightness(0.6) contrast(1.3);
-}
-
-.card-domain :hover {
-  color: #E7EAF6;
-  text-decoration: underline;
-  box-shadow : 0px 0px 15px #113F67;
-  bottom: 2px;
+  width: 100%;
+  height: 10vw;
+  background: #F8F8FF;
+  border-radius: 5px;
+  &:hover {
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0px 0px 16px -9px black;
+  }
 }
 .card-domain a {
-  position: absolute;
-  background: transparent;
-  padding: 122px;
-  border-radius: 50%;
-  width: 300px;
-  height: 300px;
-  color: white;
-  font-size: 2.3vw;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  text-shadow: 2px 2px 10px #000;
-  z-index: 3;
+  color: black;
 }
 
 .container-domain {
   position: relative;
-  padding: 15vh 10vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.domain_txt{
+  text-align: center;
+  font-size: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 7vw;
 }

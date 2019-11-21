@@ -1,7 +1,9 @@
 <% course.class_notes.each do |note| %>
   <div class="note">
     <div class="note-preview">
-      <%= cl_image_tag note.image, crop: :fill %>
+      <% if note.content.previewable? %>
+        <%= image_tag note.content.preview(resize_to_limit: [100, 100]) %>
+      <% end %>
       <div class="delete-btn">
         <%= link_to class_note_path(note.id), method: :delete, data: {confirm: 'Are you sure?'} do %>
           <i class="far fa-times-circle"></i>

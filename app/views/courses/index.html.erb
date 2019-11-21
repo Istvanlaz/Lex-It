@@ -21,7 +21,7 @@
      data-controller="sliders">
 
   <div class="courses">
-    <div class="new-course-card"
+    <div class="course-card"
          data-action="click->sliders#showIt"
          data-index="0">
           <i class="new-course fas fa-plus-circle"></i>
@@ -30,12 +30,10 @@
       <div class="course-card"
            data-action="click->sliders#showIt"
            data-index="<%= index+1 %>">
-        <div class="course-img">
-          <%= cl_image_tag course.image, crop: :fill, class: "course_pic" %>
-        </div>
-        <div class="course-name">
+
+
           <%= course.name %>
-        </div>
+
       </div>
     <% end %>
   </div>
