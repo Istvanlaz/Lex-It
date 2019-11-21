@@ -67,15 +67,16 @@
   border-radius: 25px;
   background-color: #ffffff;
   border-style: solid;
+  height: 50px;
   border-width: 4px;
-  border-color: #E98E5A;
+  border-color: #113F67;
   padding: 8px 24px;
-  color: #E98E5A;
+  color: #113F67;
   font-size:16px;
   margin-bottom: 28px;
   &:hover {
     text-decoration: none!important;
-    background-color: #E98E5A;
+    background-color: #113F67;
     color: #ffffff;
   }
 }
