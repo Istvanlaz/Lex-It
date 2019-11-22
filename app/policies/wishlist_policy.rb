@@ -1,7 +1,7 @@
 class WishlistPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.where(user: user)
+      scope.find_by(user: user)
     end
   end
 end

@@ -4,9 +4,9 @@
     <div class="note-preview">
       <%= cl_image_tag note.image, crop: :fill %>
       <div class="delete-btn">
-        <%= link_to class_note_path(note.id), method: :delete, data: {confirm: 'Are you sure?'} do %>
+        <%= link_to class_note_saving_path(note, @wishlist), method: :delete, data: {confirm: 'Are you sure?'} do %>
           <i class="far fa-times-circle"></i>
-        <% end %>
+        <% end %>`
       </div>
     </div>
     <div class="note-bottom">

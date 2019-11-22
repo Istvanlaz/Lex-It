@@ -1,4 +1,5 @@
-<% course.class_notes.each do |note| %>
+
+<% course.class_notes.sort_by{|class_note| -class_note.average_note_rating }.each do |note| %>
   <div class="note">
     <div class="note-preview">
       <% if note.content.previewable? %>

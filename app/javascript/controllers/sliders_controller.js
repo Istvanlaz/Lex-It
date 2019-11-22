@@ -4,7 +4,7 @@ export default class extends Controller {
   static targets = ["notes"];
 
   initialize() {
-    this.showSlide(1)
+    this.showSlide(0)
   }
 
   showIt(e) {
