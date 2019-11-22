@@ -153,14 +153,16 @@
 }
 
 .delete-btn {
-  position: relative;
+  position: absolute;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
   text-decoration: none;
   font-size: 2.5vh;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: space-between;
   height: 70%;
-  width: 90%;
+  width: 100%;
   color: var(--red);
 }
 

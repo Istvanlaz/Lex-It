@@ -1,20 +1,24 @@
 
-<% course.class_notes.sort_by{|class_note| -class_note.average_note_rating }.each do |note| %>
+<% class_notes.sort_by{|class_note| -class_note.average_note_rating }.each do |note| %>
   <div class="note">
-    <div class="note-preview">
-      <% if note.content.previewable? %>
-        <%= image_tag note.content.preview(resize_to_limit: [100, 100]) %>
+    <div class="delete-btn">
+      <%= link_to class_note_path(note.id), method: :delete, data: {confirm: 'Are you sure?'} do %>
+        <i class="far fa-times-circle"></i>
       <% end %>
-      <div class="delete-btn">
-        <%= link_to class_note_path(note.id), method: :delete, data: {confirm: 'Are you sure?'} do %>
-          <i class="far fa-times-circle"></i>
-        <% end %>
       <div class="heart-btn">
         <%= link_to class_note_savings_path(note), method: :post do %>
           <i class="far fa-heart"></i>
         <% end %>
       </div>
-      </div>
+    </div>
+    <div class="note-preview">
+      <% if note.content.previewable? %>
+        <div
+          class="note-preview-img"
+          style="background-image: url(<%= note.image.url %>);"
+        >
+        </div>
+      <% end %>
     </div>
     <div class="note-bottom">
       <div class="note-author">
