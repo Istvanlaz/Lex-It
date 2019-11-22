@@ -282,23 +282,6 @@ book7.resume.attach(
 
 book7.save!
 
-book8 = Book.new({
-  category_id: categories.sample,
-  title: "Fullstack React Native: Create beautiful mobile apps with JavaScript and React Native",
-  publishing_year: 2019,
-  author: "Devin Abbott",
-  user_id: user_6.id,
-  domain_id: domain_3.id
-
-
-})
-book8.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/51071Pm5H7L._SX404_BO1,204,203,200_.jpg"
-book8.resume.attach(
-  io: File.open(File.join(__dir__, 'react[Devin_Abbot,_Houssein_Djirdeh,_Anthony_Accomazzo,(z-lib.org).pdf')),
-  filename: 'react[Devin_Abbot,_Houssein_Djirdeh,_Anthony_Accomazzo,(z-lib.org).pdf'
-  )
-book8.save!
-
 book9 = Book.new({
   category_id: categories.sample,
   title: "Computer Networking: A Top-Down Approach, 7th Edition",
