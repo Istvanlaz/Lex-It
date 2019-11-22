@@ -50,7 +50,7 @@
       <div class="notes"
            data-target="sliders.notes"
            data-sliders-index="<%= index+1 %>">
-        <%= render partial: 'courses/note', locals: { class_notes: course.class_notes } %>
+        <%= render partial: 'courses/note', locals: { class_notes: course.class_notes, delete_path: Proc.new{|note_id| class_note_path(note_id) } } %>
       </div>
 
     <% end %>

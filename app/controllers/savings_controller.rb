@@ -14,6 +14,7 @@ class SavingsController < ApplicationController
 
   def destroy
     authorize @saving = Saving.find_by(wishlist_id: params[:id], class_note_id: params[:class_note_id])
+    @saving.destroy
     redirect_to wishlists_path, notice: "Class Note was Deleted from Savings"
   end
 end
