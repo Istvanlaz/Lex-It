@@ -4,7 +4,12 @@
   position: relative;
   background: #fff4e3;
   box-shadow: 1px 1px 9px grey;
-  background-image: url("notesbg2.jpg");
+  background-color: #FFF4E3;
+  background-image: asset-url("illustrations/Femme_page1.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 150px 150px;
 }
 
 .content a {
