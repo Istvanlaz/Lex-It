@@ -605,7 +605,7 @@ classnote11 = ClassNote.new({
 classnote11.content.attach(
   io: File.open(File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')),
   filename: 'JavaScriptProgrammingnotes.pdf')
-classnote11.remote_image_url = File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')
+classnote11.remote_image_url = File.join(__dir__, 'courses/note_js.jpg')
 classnote11.save!
 
 classnote12 = ClassNote.new({
@@ -618,7 +618,7 @@ classnote12 = ClassNote.new({
 classnote12.content.attach(
   io: File.open(File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')),
   filename: 'JavaScriptProgrammingnotes.pdf')
-classnote12.remote_image_url = File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')
+classnote12.remote_image_url = File.join(__dir__, 'courses/notes_dat3.jpg')
 classnote12.save!
 
 classnote13 = ClassNote.new({
@@ -631,7 +631,7 @@ classnote13 = ClassNote.new({
 classnote13.content.attach(
   io: File.open(File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')),
   filename: 'JavaScriptProgrammingnotes.pdf')
-classnote13.remote_image_url = File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')
+classnote13.remote_image_url = File.join(__dir__, 'courses/notes_dat2.jpg')
 classnote13.save!
 
 classnote14 = ClassNote.new({
@@ -644,7 +644,7 @@ classnote14 = ClassNote.new({
 classnote14.content.attach(
   io: File.open(File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')),
   filename: 'JavaScriptProgrammingnotes.pdf')
-classnote14.remote_image_url = File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')
+classnote14.remote_image_url = File.join(__dir__, 'courses/notes_dat1.jpg')
 classnote14.save!
 
 classnote15 = ClassNote.new({
@@ -657,7 +657,7 @@ classnote15 = ClassNote.new({
 classnote15.content.attach(
   io: File.open(File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')),
   filename: 'JavaScriptProgrammingnotes.pdf')
-classnote15.remote_image_url = File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')
+classnote15.remote_image_url = File.join(__dir__, 'courses/note_python.jpg')
 classnote15.save!
 
 classnote16 = ClassNote.new({
@@ -671,7 +671,7 @@ classnote16.content.attach(
   io: File.open(File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')),
   filename: 'JavaScriptProgrammingnotes.pdf')
 
-classnote16.remote_image_url = File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')
+classnote16.remote_image_url = File.join(__dir__, 'courses/note_backend.jpg')
 classnote16.save!
 
 classnote17 = ClassNote.new({
