@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2019_11_21_101428) do
     t.bigint "user_id"
     t.bigint "reading_list_id"
     t.bigint "domain_id"
+    t.boolean "wishlist"
     t.index ["category_id"], name: "index_books_on_category_id"
     t.index ["domain_id"], name: "index_books_on_domain_id"
     t.index ["reading_list_id"], name: "index_books_on_reading_list_id"
