@@ -1,7 +1,9 @@
 <% course.class_notes.each do |note| %>
   <div class="note">
     <div class="note-preview">
-      <%= cl_image_tag note.image, crop: :fill %>
+      <% if note.content.previewable? %>
+        <%= image_tag note.content.preview(resize_to_limit: [100, 100]) %>
+      <% end %>
       <div class="delete-btn">
         <%= link_to class_note_path(note.id), method: :delete, data: {confirm: 'Are you sure?'} do %>
           <i class="far fa-times-circle"></i>
@@ -23,17 +25,11 @@
       </div>
       <div class="note-details">
         <div class="note-score">
-          <p>⭐: <%= note.average_note_rating %>/5</p>
+          <span>⭐ <%= note.average_note_rating %>/5</span>
         </div>
-        <div class="note-action">
-          <div class="content btn btn-primary"><a>
-            <%= link_to "Read", url_for(note.content) %></a>
-          </div>
-        </div>
+        <%= link_to "+ rating", new_class_note_note_rating_path(note.id), class: "rate" %>
       </div>
-      <div class="buttons-descr">
-          <p class="btn button-show"><%= link_to "Add a Rating", new_class_note_note_rating_path(note.id) %></p>
-      </div>
+      <%= link_to "Read it", class_note_path(note), class: "buttons-descr" %>
     </div>
   </div>
 <% end  %>

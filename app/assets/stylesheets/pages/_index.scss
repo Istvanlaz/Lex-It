@@ -7,9 +7,12 @@
 @import "course";
 
 .searchbar{
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  position: absolute;
+  z-index: 2;
+  background: var(--white);
+  border-radius: 5px;
+  top: 3vh;
+  left: 40%;
 }
 
 .search-center {

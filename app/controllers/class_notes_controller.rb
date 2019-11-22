@@ -1,9 +1,11 @@
+require 'open-uri'
+
 class ClassNotesController < ApplicationController
   def index
   end
 
   def show
-    authorize @class_note = ClassNote.find(params[:id])
+    authorize @note = ClassNote.find(params[:id])
   end
 
   def new

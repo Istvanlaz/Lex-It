@@ -4,6 +4,7 @@
   position: relative;
   background: #fff4e3;
   box-shadow: 1px 1px 9px grey;
+  background-image: url("notesbg2.jpg");
 }
 
 .content a {
@@ -13,14 +14,14 @@
 
 .notes {
   position: absolute;
-  padding: 1vw;
+  padding: 2vw;
   right: 0;
   top: 0;
   visibility: hidden;
   opacity: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: start;
   align-items: center;
   width: 100%;
 }
@@ -33,7 +34,7 @@
 .note {
   padding: 10px;
   width: 25vw;
-  height: 530px;
+  height: 420px;
   display: grid;
   grid-gap: 10px;
   grid-template-rows: 3fr 2fr;
@@ -42,12 +43,24 @@
   background: #fff4e3;
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgb(10, 10, 10);
+  max-width: 230px;
 }
 
 .note-preview {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+}
+
+.note-action {
+  padding: 0.5vh 2vw;
+  border-radius: 5px;
+  font-size: 12px;
+
+  a{
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .note-preview img {
@@ -59,9 +72,15 @@
 
 .note-details {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 10px 0px;
+}
+
+.note-score {
+  font-size: 1.5vw;
+  font-weight: 700;
+  color: gray;
 }
 
 .note-author {
@@ -79,9 +98,8 @@
   width: 80%;
   padding: 3px;
 
-  h3{
-    font-size: 2vw;
-    margin: 0;
+  h4{
+    font-size: 1rem;
   }
   p{
     font-size: 1vw;

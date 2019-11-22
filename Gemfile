@@ -17,6 +17,7 @@ gem 'active_storage_validations'
 gem 'pdf_meta'
 gem 'pdf-reader', '~> 1.4'
 
+
 gem 'autoprefixer-rails'
 gem 'devise'
 gem 'font-awesome-sass', '~> 5.6.1'

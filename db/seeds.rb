@@ -162,10 +162,8 @@ domain_6.remote_image_url = File.join(__dir__, 'topics/topic_sciences.jpg')
 domain_6.save!
 
 puts "Done with the domains seeds !"
+
 puts 'Creating awesome books...'
-
-#path = File.join(__dir__, '.pdf')
-
 book0 = Book.new({
   category_id: categories.sample,
   title: "Machine Learning with python cookbook",
@@ -416,10 +414,7 @@ book15.resume.attach(
 book15.save!
 # books = Book.all
 
-
-
 puts 'Creating awesome courses...'
-
 course_1 = Course.new({
   name: "SQL",
   domain_id: domain_3.id
@@ -510,11 +505,11 @@ classnote0 = ClassNote.new({
   user_id: user_2.id,
   course: course_1,
   title: "SQL Basics",
-  author: "Irene",
+  author: "Lanai gustro",
   click_counter: 4
 })
 classnote0.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
-classnote0.remote_image_url = File.join(__dir__, 'courses/note_sql.jpg')
+classnote0.remote_image_url = File.join(__dir__, 'notes.pdf')
 classnote0.save!
 
 
@@ -522,7 +517,7 @@ classnote1 = ClassNote.new({
   user_id: user_2.id,
   course: course_1,
   title: "SQL Median",
-  author: "Naruto",
+  author: "Irene Mai",
   click_counter: 4
 })
 classnote1.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
@@ -544,8 +539,8 @@ classnote2.save!
 classnote3 = ClassNote.new({
   user_id: user_2.id,
   course: course_2,
-  title: "SQL for Pros!!",
-  author: "Jack",
+  title: "SQL for Pros",
+  author: "Bujina Lasso",
   click_counter: 4
 })
 
@@ -557,8 +552,8 @@ classnote3.save!
 classnote4 = ClassNote.new({
   user_id: user_2.id,
   course: course_3,
-  title: "Front is not made for noobs",
-  author: "Johnson",
+  title: "Front-End spider",
+  author: "Kabui Fino",
   click_counter: 4
 })
 classnote4.content.attach(io: File.open(path_notes), filename: 'notes.pdf')

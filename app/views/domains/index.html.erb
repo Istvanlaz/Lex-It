@@ -4,9 +4,6 @@
       <div class="domain_txt">
         <%= link_to domain.name, domain_path(domain) %>
       </div>
-      <%= cl_image_tag(domain.image,
-            width: 300, height: 300, crop: :fill, class: 'domain_pic') %>
     </div>
-
   <% end %>
 </div>
