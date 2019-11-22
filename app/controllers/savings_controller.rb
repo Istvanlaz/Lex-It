@@ -9,11 +9,11 @@ class SavingsController < ApplicationController
     @class_note = ClassNote.find(params[:class_note_id])
     @wishlist = Wishlist.where(user: current_user).first
     authorize @saving = Saving.create(wishlist: @wishlist, class_note: @class_note)
-    redirect_to domain_courses_path(@class_note.course.domain_id)
+    redirect_to domain_courses_path(@class_note.course.domain_id), notice: "Class Note was Added to Wishlist"
   end
 
   def destroy
     authorize @saving = Saving.find_by(wishlist_id: params[:id], class_note_id: params[:class_note_id])
-    redirect_to wishlists_path
+    redirect_to wishlists_path, notice: "Class Note was Deleted from Savings"
   end
 end

@@ -25,7 +25,7 @@ class CoursesController < ApplicationController
     authorize @course = Course.new(course_params)
     @course.user = current_user
     if @course.save
-      redirect_to domain_courses_path
+      redirect_to domain_courses_path, notice: "Class Note was Created"
     else
       render :new
     end
@@ -34,7 +34,7 @@ class CoursesController < ApplicationController
   def update
     authorize @course = Course.find(params[:id])
     if @course.update(course_params)
-      redirect_to domain_courses_path
+      redirect_to domain_courses_path, notice: "Class Note was Updated"
     else
       # @course.errors
       render :new
@@ -44,7 +44,7 @@ class CoursesController < ApplicationController
   def destroy
     authorize @course = Course.find(params[:id])
     @course.destroy
-    redirect_to domain_courses_path
+    redirect_to domain_courses_path, notice: "Class Note was Destroyed"
   end
 
   private
