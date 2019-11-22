@@ -138,7 +138,7 @@ domain_2.remote_image_url = File.join(__dir__, 'topics/topic_law.jpg')
 domain_2.save!
 
 domain_3 = Domain.create!({
-  name: "Computer Sciences"
+  name: "Computer Science"
 })
 domain_3.remote_image_url = File.join(__dir__, 'topics/topic_coding.jpg')
 domain_3.save!
@@ -211,23 +211,6 @@ book2.resume.attach(
   filename: 'More_Programming_Pearls2nd.pdf'
 )
 book2.save!
-
-book3 = Book.new({
-  category_id: categories.sample,
-  title: "Eloquent Javascript 1st edition",
-  publishing_year: 2011,
-  author: "Marijn Haver",
-  user_id: user_6.id,
-  domain_id: domain_3.id
-
-
-})
-book3.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/515jiKSErDL._SX376_BO1,204,203,200_.jpg"
-book3.resume.attach(
-  io: File.open(File.join(__dir__, 'Marijn_Haverbeke Eloquent_JavaScript.pdf')),
-  filename: 'Marijn_Haverbeke Eloquent_JavaScript.pdf'
-)
-book3.save!
 
 book4 = Book.new({
   category_id: categories.sample,
@@ -488,7 +471,7 @@ classnote0 = ClassNote.new({
   user_id: user_2.id,
   course: course_1,
   title: "SQL Basics",
-  author: "Lanai gustro",
+  author: "Lanai Gustro",
   click_counter: 4
 })
 classnote0.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
@@ -499,7 +482,7 @@ classnote0.save!
 classnote1 = ClassNote.new({
   user_id: user_2.id,
   course: course_1,
-  title: "SQL Median",
+  title: "SQL Basics",
   author: "Irene Mai",
   click_counter: 4
 })
@@ -535,7 +518,7 @@ classnote3.save!
 classnote4 = ClassNote.new({
   user_id: user_2.id,
   course: course_3,
-  title: "Front-End spider",
+  title: "Front-End Spider",
   author: "Kabui Fino",
   click_counter: 4
 })
@@ -547,7 +530,7 @@ classnote4.save!
 classnote5 = ClassNote.new({
   user_id: user_2.id,
   course: course_6,
-  title: "I'm the king of them bananas",
+  title: "SQL for Pros",
   author: "Gauthiey",
   click_counter: 4
 })
@@ -603,7 +586,7 @@ classnote9.save!
 classnote10 = ClassNote.new({
   user_id: user_2.id,
   course: course_4,
-  title: "Front 2.0",
+  title: "Front Cracking",
   author: "Georges",
   click_counter: 4
 })
@@ -625,7 +608,7 @@ classnote11.save!
 classnote12 = ClassNote.new({
   user_id: user_2.id,
   course: course_5,
-  title: "JS iz da best",
+  title: "Javascript Pro xl",
   author: "Luke Skywalker",
   click_counter: 4
 })
@@ -636,7 +619,7 @@ classnote12.save!
 classnote13 = ClassNote.new({
   user_id: user_2.id,
   course: course_5,
-  title: "Differences Java vs JS?",
+  title: "Java for Noobs",
   author: "Lex Luthor",
   click_counter: 4
 })
@@ -647,7 +630,7 @@ classnote13.save!
 classnote14 = ClassNote.new({
   user_id: user_2.id,
   course: course_5,
-  title: "Java is not a Star Wars character",
+  title: "Java for Noobs",
   author: "Obiwan",
   click_counter: 4
 })
@@ -680,7 +663,7 @@ classnote16.save!
 classnote17 = ClassNote.new({
   user_id: user_2.id,
   course: course_4,
-  title: "Front End for real Cracks",
+  title: "Getting a perfect Front",
   author: "Sacha",
   click_counter: 4
 })
