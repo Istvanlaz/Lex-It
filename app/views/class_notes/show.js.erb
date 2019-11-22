@@ -1,0 +1,8 @@
+var replaceNotes = (innerHTML) => {
+
+  var boxToReplace = document.querySelector('.notes-select')
+  boxToReplace.innerHTML = innerHTML
+
+}
+
+replaceNotes('<%= j render partial: "class_notes/show", locals: { note: @note } %>')

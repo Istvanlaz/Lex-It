@@ -590,7 +590,8 @@ classnote10 = ClassNote.new({
   author: "Georges",
   click_counter: 4
 })
-classnote10.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
+classnote10.content.attach(
+  io: File.open(path_notes), filename: 'notes.pdf')
 classnote10.remote_image_url = File.join(__dir__, 'courses/note_js.jpg')
 classnote10.save!
 
@@ -601,8 +602,10 @@ classnote11 = ClassNote.new({
   author: "Irene",
   click_counter: 4
 })
-classnote11.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
-classnote11.remote_image_url = File.join(__dir__, 'courses/note_sql.jpg')
+classnote11.content.attach(
+  io: File.open(File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')),
+  filename: 'JavaScriptProgrammingnotes.pdf')
+classnote11.remote_image_url = File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')
 classnote11.save!
 
 classnote12 = ClassNote.new({
@@ -612,8 +615,10 @@ classnote12 = ClassNote.new({
   author: "Luke Skywalker",
   click_counter: 4
 })
-classnote12.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
-classnote12.remote_image_url = File.join(__dir__, 'courses/note_backend.jpg')
+classnote12.content.attach(
+  io: File.open(File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')),
+  filename: 'JavaScriptProgrammingnotes.pdf')
+classnote12.remote_image_url = File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')
 classnote12.save!
 
 classnote13 = ClassNote.new({
@@ -623,8 +628,10 @@ classnote13 = ClassNote.new({
   author: "Lex Luthor",
   click_counter: 4
 })
-classnote13.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
-classnote13.remote_image_url = File.join(__dir__, 'courses/note_python.jpg')
+classnote13.content.attach(
+  io: File.open(File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')),
+  filename: 'JavaScriptProgrammingnotes.pdf')
+classnote13.remote_image_url = File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')
 classnote13.save!
 
 classnote14 = ClassNote.new({
@@ -634,8 +641,10 @@ classnote14 = ClassNote.new({
   author: "Obiwan",
   click_counter: 4
 })
-classnote14.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
-classnote14.remote_image_url = File.join(__dir__, 'courses/notes_dat3.jpg')
+classnote14.content.attach(
+  io: File.open(File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')),
+  filename: 'JavaScriptProgrammingnotes.pdf')
+classnote14.remote_image_url = File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')
 classnote14.save!
 
 classnote15 = ClassNote.new({
@@ -645,19 +654,24 @@ classnote15 = ClassNote.new({
   author: "Lord Anton",
   click_counter: 4
 })
-classnote15.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
-classnote15.remote_image_url = File.join(__dir__, 'courses/notes_dat2.jpg')
+classnote15.content.attach(
+  io: File.open(File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')),
+  filename: 'JavaScriptProgrammingnotes.pdf')
+classnote15.remote_image_url = File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')
 classnote15.save!
 
 classnote16 = ClassNote.new({
   user_id: user_2.id,
   course: course_5,
-  title: "What YOU need to know on Java",
+  title: "What you need to know on Java",
   author: "Georges Clooney",
   click_counter: 4
 })
-classnote16.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
-classnote16.remote_image_url = File.join(__dir__, 'courses/notes_dat1.jpg')
+classnote16.content.attach(
+  io: File.open(File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')),
+  filename: 'JavaScriptProgrammingnotes.pdf')
+
+classnote16.remote_image_url = File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')
 classnote16.save!
 
 classnote17 = ClassNote.new({
