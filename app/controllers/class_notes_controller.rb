@@ -6,6 +6,7 @@ class ClassNotesController < ApplicationController
 
   def show
     authorize @note = ClassNote.find(params[:id])
+    @sibling_notes = @note.course.class_notes.where.not(id: @note.id)
   end
 
   def new
