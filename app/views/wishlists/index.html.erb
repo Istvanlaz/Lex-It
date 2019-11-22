@@ -1,36 +1,4 @@
 
-<% @notes.each do |note| %>
-  <div class="note">
-    <div class="note-preview">
-      <%= cl_image_tag note.image, crop: :fill %>
-      <div class="delete-btn">
-        <%= link_to class_note_saving_path(note, @wishlist), method: :delete, data: {confirm: 'Are you sure?'} do %>
-          <i class="far fa-times-circle"></i>
-        <% end %>`
-      </div>
-    </div>
-    <div class="note-bottom">
-      <div class="note-author">
-        <%= cl_image_tag note.user.avatar, height: 40, width: 40, crop: :fill, class: 'avatar' %>
-        <div class="author-detail">
-          <h4><%= note.title %></h4>
-          <p><%= note.author %></p>
-        </div>
-      </div>
-      <div class="note-details">
-        <div class="note-score">
-          <p>⭐: <%= note.average_note_rating %>/5</p>
-        </div>
-        <div class="note-action">
-          <div class="content btn btn-primary"><a>
-            <%= link_to "Read", url_for(note.content) %></a>
-          </div>
-        </div>
-      </div>
-      <div class="buttons-descr">
-          <p class="btn button-show"><%= link_to "Add a Rating", new_class_note_note_rating_path(note.id) %></p>
-      </div>
-    </div>
-  </div>
-<% end %>
-
+<div class="wishlist">
+  <%= render partial: 'courses/note', locals: { class_notes: @notes } %>
+</div>
