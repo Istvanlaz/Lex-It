@@ -15,7 +15,7 @@ class NoteRatingsController < ApplicationController
     @note_rating = NoteRating.new(note_rating_params)
     @note_rating.class_note = ClassNote.find(params[:class_note_id])
     if @note_rating.save!
-      redirect_to domain_courses_path(@class_note.course_id)
+      redirect_to domain_courses_path(@class_note.course.domain_id)
     else
       render :new
     end
