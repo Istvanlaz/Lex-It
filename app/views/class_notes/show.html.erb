@@ -16,7 +16,7 @@
   <div class="note-reader">
     <div class="url"
              data-controller="pdf"
-             data-pdf='<%= (url_for(@note.content)).to_json %>'></div>
+             data-pdf='<%= rails_blob_url(@note.content).to_json %>'></div>
 
     <div class="pdf-reader">
       <% (1..10).each_with_index do |number| %>
