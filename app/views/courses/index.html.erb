@@ -1,39 +1,56 @@
 
 <div class="searchbar">
-  <form class="form-inline">
-      <%= form_tag domain_courses_path, method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find a course"
-        %>
-        <%= submit_tag "Search", class: "btn btn-primary" %>
-      <% end %>
-  </form>
+  <div class="search-left">
+    <p class="btn button-medium-small2"><%= link_to "All Courses", domain_courses_path %></p>
+  </div>
+  <div class="search-center">
+    <form class="form-inline">
+        <%= form_tag domain_courses_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find a Course"
+          %>
+          <%= submit_tag "Search", class: "btn btn-primary" %>
+        <% end %>
+    </form>
+  </div>
 </div>
 
 <div class="syllabus-container"
      data-controller="sliders">
 
   <div class="courses">
+    <div class="course-card"
+         data-action="click->sliders#showIt"
+         data-index="0">
+          <i class="new-course fas fa-plus-circle"></i>
+    </div>
     <% @courses.each_with_index do |course, index| %>
       <div class="course-card"
            data-action="click->sliders#showIt"
-           data-index="<%= index %>">
-        <%= cl_image_tag course.image, height: 200, width: 200, crop: :fill, class: "course_pic" %>
-        <%= course.name %>
-      </div>
+           data-index="<%= index+1 %>">
 
+
+          <%= course.name %>
+
+      </div>
     <% end %>
   </div>
 
   <div class="all-notes">
+        <div class="notes"
+           data-target="sliders.notes"
+           data-sliders-index="0">
+        <%= render partial: 'courses/new', locals: {courses: @courses} %>
+      </div>
+
     <% @courses.each_with_index do |course, index| %>
 
       <div class="notes"
            data-target="sliders.notes"
-           data-sliders-index="<%= index %>">
-        <%= render partial: 'courses/note', locals: { course: course } %>
+           data-sliders-index="<%= index+1 %>">
+        <%= render partial: 'courses/note', locals: { class_notes: course.class_notes, delete_path: Proc.new{|note_id| class_note_path(note_id) } } %>
       </div>
 
     <% end %>

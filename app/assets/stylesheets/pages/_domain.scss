@@ -1,14 +1,27 @@
 .domains-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 20px;
-  background-color: #D7C79E;
+  overflow: scroll;
+  width: 24%;
+    height: 74vh;
+    padding: 2vw;
+    box-shadow: 4px 0px 9px -7px black;
+    position: relative;
+    -webkit-box-pack: justify;
+    align-items: center;
 }
 .container-domain h1 {
   color: red;
-  position: absolute;
   display: flex;
   align-items: flex-start;
+  background-color: #e9ecef;
+}
+
+.container-domain {
+  display: grid;
+  background-color: #e9ecef;
+    width: 24%;
+    height: 74vh;
+    padding: 2vw;
+    box-shadow: 4px 0px 9px -7px black;
 }
 
 .domain_pic {
@@ -20,45 +33,57 @@
 }
 
 .card-domain {
-  margin: 20px;
+  margin: 10px 8px;
   position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.card-domain img {
-  box-shadow: 2px 2px 18px #000;
-}
-
-.card-domain :hover {
-  color: #E7EAF6;
-  text-decoration: underline;
-}
-
-.card-domain :hover {
-  bottom: 2px;
-}
-
-.card-domain a {
-  position: absolute;
-  background: transparent;
-  padding: 122px;
-  border-radius: 50%;
-  width: 300px;
-  height: 300px;
-  color: white;
-  font-size: 3vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
-  text-shadow: 2px 2px 10px #000;
+  background: #F8F8FF;
+  border-radius: 5px;
+  transition: all .3s;
+  height: 80px;
+  a {
+    color: grey;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+  }
+  &:hover {
+    text-decoration: none;
+    //font-weight: bold;
+    box-shadow: 0px 0px 16px -9px black;
+    a {
+      color: black;
+    }
+  }
 }
+
 
 .container-domain {
   position: relative;
-  padding: 15vh 10vw;
-  display: flex;
+
   justify-content: space-between;
+  align-items: center;
+}
+
+.domain_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110px;
+  h1 {
+    text-align: center;
+    color: black;
+    font-size: 2em;
+    margin-bottom: 0;
+  }
+}
+
+.domain_txt{
+  width: 100%;
+  text-align: center;
+  font-size: 2vw;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }

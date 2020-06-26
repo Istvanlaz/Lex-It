@@ -1,0 +1,4 @@
+
+<div class="wishlist">
+  <%= render partial: 'courses/note', locals: { class_notes: @notes, delete_path: Proc.new{|note_id| class_note_saving_path(note_id, @wishlist.id)} } %>
+</div>

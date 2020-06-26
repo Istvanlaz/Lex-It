@@ -1,0 +1,17 @@
+<div class="new-note">
+  <div class="title-new-note">
+    <h2>Share your class notes !</h2>
+    <br><br>
+  </div>
+  <div class="form-new-note">
+    <%= simple_form_for [@class_note] do |f| %>
+      <%= f.input :title %>
+      <%= f.input :author %>
+      <%= f.association :course %>
+      <%= f.input :content, required: true %>
+      <%= f.input :image %>
+      <%= f.input :image_cache, as: :hidden %>
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

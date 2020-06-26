@@ -1,26 +1,38 @@
-<% course.class_notes.each do |note| %>
+
+<% class_notes.sort_by{|class_note| -class_note.average_note_rating }.each do |note| %>
   <div class="note">
+    <div class="delete-btn">
+      <%= link_to delete_path.call(note.id), method: :delete, data: {confirm: 'Are you sure?'} do %>
+        <i class="far fa-times-circle"></i>
+      <% end %>
+      <div class="heart-btn">
+        <%= link_to class_note_savings_path(note), method: :post do %>
+          <i class="far fa-heart"></i>
+        <% end %>
+      </div>
+    </div>
     <div class="note-preview">
-      <%= cl_image_tag note.image, crop: :fill %>
+        <div
+          class="note-preview-img"
+          style="background-image: url(<%= note.image.url %>);"
+        >
+        </div>
     </div>
     <div class="note-bottom">
       <div class="note-author">
         <%= cl_image_tag note.user.avatar, height: 40, width: 40, crop: :fill, class: 'avatar' %>
         <div class="author-detail">
-          <h3><%= note.title %></h3>
+          <h4><%= note.title %></h4>
           <p><%= note.author %></p>
         </div>
       </div>
       <div class="note-details">
         <div class="note-score">
-          ⭐ -- <%= rand(3..10) %>/10
+          <span>⭐ <%= note.average_note_rating %>/5</span>
         </div>
-        <div class="note-action">
-          <div class="content btn btn-primary"><a>
-            <%= link_to "Read", url_for(note.content) %></a>
-          </div>
-        </div>
+        <%= link_to "+ rating", new_class_note_note_rating_path(note.id), class: "rate" %>
       </div>
+      <%= link_to "Read it", class_note_path(note), class: "buttons-descr" %>
     </div>
   </div>
 <% end  %>

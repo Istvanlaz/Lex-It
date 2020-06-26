@@ -4,11 +4,31 @@
 @import "show";
 @import "login";
 @import "domain";
+@import "course";
+@import "wishlist";
 
 .searchbar{
-  width: fit-content;
-  margin: 0 auto ;
+  position: absolute;
+  z-index: 2;
+  background: transparent;
+  border-radius: 5px;
+  top: 3vh;
+  left: 15%;
+  width: 52%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
 }
+
+.search-center {
+  display: flex;
+  justify-content: center;
+  padding-left: 12%;
+}
+
+.search-left {
+  margin-left: 10%;
+}
+
 .form-inline input{
   margin-right: 15px;
 }

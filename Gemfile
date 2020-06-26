@@ -15,6 +15,8 @@ gem 'cloudinary', '~> 1.9.1'
 gem 'pundit'
 gem 'active_storage_validations'
 gem 'pdf_meta'
+gem 'pdf-reader', '~> 1.4'
+
 
 gem 'autoprefixer-rails'
 gem 'devise'

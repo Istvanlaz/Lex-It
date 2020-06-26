@@ -6,7 +6,7 @@ class Book < ApplicationRecord
   validates :author, presence: true
   validates :publishing_year, presence: true
   # validate :resume_attached?
-  validates :resume, attached: true, content_type: :pdf
+  validates :resume, content_type: :pdf
   mount_uploader :image, PhotoUploader
 
   belongs_to :domain
@@ -14,12 +14,12 @@ class Book < ApplicationRecord
   searchkick word_middle: [:name]
 
   def average_rating
-    return 0 if ratings.empty?
+    return 'Be the first to rate' if ratings.empty?
 
     (ratings.map(&:rating).sum / ratings.count).round 2
   end
 
   def resume_attached?
-    return errors.add(:resume, "must add an resume") unless resume.attached?
+    return errors.add(:resume, "Must add a Resume") unless resume.attached?
   end
 end

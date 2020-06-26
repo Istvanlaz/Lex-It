@@ -122,9 +122,6 @@ user_8.save!
 
 # users = User.all
 
-puts 'Creating awesome books...'
-
-path = File.join(__dir__, '')
 
 puts 'Creating awesome domains...'
 
@@ -141,7 +138,7 @@ domain_2.remote_image_url = File.join(__dir__, 'topics/topic_law.jpg')
 domain_2.save!
 
 domain_3 = Domain.create!({
-  name: "Coding"
+  name: "Computer Science"
 })
 domain_3.remote_image_url = File.join(__dir__, 'topics/topic_coding.jpg')
 domain_3.save!
@@ -164,7 +161,9 @@ domain_6 = Domain.create!({
 domain_6.remote_image_url = File.join(__dir__, 'topics/topic_sciences.jpg')
 domain_6.save!
 
+puts "Done with the domains seeds !"
 
+puts 'Creating awesome books...'
 book0 = Book.new({
   category_id: categories.sample,
   title: "Machine Learning with python cookbook",
@@ -174,7 +173,10 @@ book0 = Book.new({
   domain_id: domain_3.id
 })
 book0.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/51TcoYciN6L._SX379_BO1,204,203,200_.jpg"
-book0.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book0.resume.attach(
+  io: File.open(File.join(__dir__, 'Machine_Learning_with_Python_Cookbook.pdf')),
+  filename: 'Machine_Learning_with_Python_Cookbook.pdf'
+)
 book0.save!
 
 book1 = Book.new({
@@ -187,7 +189,10 @@ book1 = Book.new({
 
 })
 book1.remote_image_url = 'https://images-na.ssl-images-amazon.com/images/I/5182nSkamwL._SX367_BO1,204,203,200_.jpg'
-book1.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book1.resume.attach(
+  io: File.open(File.join(__dir__, 'Jon_Bentley Programming_Pearls.pdf')),
+  filename: 'Jon_Bentley Programming_Pearls.pdf'
+)
 book1.save!
 
 book2 = Book.new({
@@ -201,22 +206,11 @@ book2 = Book.new({
 
 })
 book2.remote_image_url = 'https://images-na.ssl-images-amazon.com/images/I/51OLe7bvBWL._SX336_BO1,204,203,200_.jpg'
-book2.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book2.resume.attach(
+  io: File.open(File.join(__dir__, 'More_Programming_Pearls2nd.pdf')),
+  filename: 'More_Programming_Pearls2nd.pdf'
+)
 book2.save!
-
-book3 = Book.new({
-  category_id: categories.sample,
-  title: "Eloquent Javascript 1st edition",
-  publishing_year: 2011,
-  author: "Marijn Haver",
-  user_id: user_6.id,
-  domain_id: domain_3.id
-
-
-})
-book3.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/515jiKSErDL._SX376_BO1,204,203,200_.jpg"
-book3.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
-book3.save!
 
 book4 = Book.new({
   category_id: categories.sample,
@@ -229,7 +223,10 @@ book4 = Book.new({
 
 })
 book4.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/515jiKSErDL._SX376_BO1,204,203,200_.jpg"
-book4.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book4.resume.attach(
+  io: File.open(File.join(__dir__, 'Marijn_Haverbeke Eloquent_JavaScript2e.pdf')),
+  filename: 'Marijn_Haverbeke Eloquent_JavaScript2e.pdf'
+)
 book4.save!
 
 book5 = Book.new({
@@ -243,22 +240,12 @@ book5 = Book.new({
 
 })
 book5.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/51-5ZXYtcML._SX377_BO1,204,203,200_.jpg"
-book5.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book5.resume.attach(
+  io: File.open(File.join(__dir__, 'Marijn_Haverbeke Eloquent_JavaScript.pdf')),
+  filename: 'Marijn_Haverbeke Eloquent_JavaScript.pdf'
+  )
 book5.save!
 
-book6 = Book.new({
-  category_id: categories.sample,
-  title: "JavaScript and JQuery: Interactive Front–End Web Development",
-  publishing_year: 2014,
-  author: "Jon Duckket",
-  user_id: user_6.id,
-  domain_id: domain_3.id
-
-
-})
-book6.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/41y31M-zcgL._SX400_BO1,204,203,200_.jpg"
-book6.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
-book6.save!
 
 book7 = Book.new({
   category_id: categories.sample,
@@ -271,22 +258,12 @@ book7 = Book.new({
 
 })
 book7.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/41Nd3IVeklL._SX348_BO1,204,203,200_.jpg"
-book7.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book7.resume.attach(
+  io: File.open(File.join(__dir__, 'Modern_API_Design_with_AS.pdf')),
+  filename: 'Modern_API_Design_with_AS.pdf'
+  )
+
 book7.save!
-
-book8 = Book.new({
-  category_id: categories.sample,
-  title: "Fullstack React Native: Create beautiful mobile apps with JavaScript and React Native",
-  publishing_year: 2019,
-  author: "Devin Abbott",
-  user_id: user_6.id,
-  domain_id: domain_3.id
-
-
-})
-book8.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/51071Pm5H7L._SX404_BO1,204,203,200_.jpg"
-book8.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
-book8.save!
 
 book9 = Book.new({
   category_id: categories.sample,
@@ -299,7 +276,10 @@ book9 = Book.new({
 })
 
 book9.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/51xp1%2BoDRML._SX402_BO1,204,203,200_.jpg"
-book9.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book9.resume.attach(
+  io: File.open(File.join(__dir__, '[James_Kurose,_Keith_Ross]_Computer_Networking__A_(z-lib.org).pdf')),
+  filename: '[James_Kurose,_Keith_Ross]_Computer_Networking__A_(z-lib.org).pdf'
+  )
 book9.save!
 
 book10 = Book.new({
@@ -313,7 +293,9 @@ book10 = Book.new({
 })
 
 book10.remote_image_url = "https://images-eu.ssl-images-amazon.com/images/I/51c5QnQTEZL.jpg"
-book10.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book10.resume.attach(
+  io: File.open(File.join(__dir__, '[Tero_Karvinen,_Kimmo_Karvinen]_Make__Arduino_Bots(z-lib.org).pdf')),
+  filename: '[Tero_Karvinen,_Kimmo_Karvinen]_Make__Arduino_Bots(z-lib.org).pdf')
 book10.save!
 
 book11 = Book.new({
@@ -327,7 +309,9 @@ book11 = Book.new({
 })
 
 book11.remote_image_url = "https://s.s-bol.com/imgbase0/imagebase3/large/FC/6/7/7/9/9200000091699776.jpg"
-book11.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book11.resume.attach(
+  io: File.open(File.join(__dir__, '[Kai-Fu_Lee]_AI_Superpowers__China,_Silicon_Valley(z-lib.org).epub.pdf')),
+  filename: '[Kai-Fu_Lee]_AI_Superpowers__China,_Silicon_Valley(z-lib.org).epub.pdf')
 book11.save!
 
 book12 = Book.new({
@@ -341,7 +325,10 @@ book12 = Book.new({
 
 })
 book12.remote_image_url = "https://images-eu.ssl-images-amazon.com/images/I/51o%2B7BRJ45L.jpg"
-book12.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book12.resume.attach(
+  io: File.open(File.join(__dir__, '[Jeff_Heaton]_Introduction_to_the_Math_of_Neural_N(z-lib.org).pdf')),
+  filename: '[Jeff_Heaton]_Introduction_to_the_Math_of_Neural_N(z-lib.org).pdf'
+  )
 book12.save!
 
 book13 = Book.new({
@@ -354,8 +341,10 @@ book13 = Book.new({
 
 })
 book13.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/51cAXV2e6LL._SX402_BO1,204,203,200_.jpg"
-book13.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
-book13.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book13.resume.attach(
+ io: File.open(File.join(__dir__, '[Jeff_Heaton]_Artificial_Intelligence_for_Humans,_(z-lib.org).pdf')),
+  filename: '[Jeff_Heaton]_Artificial_Intelligence_for_Humans,_(z-lib.org).pdf'
+  )
 book13.save!
 
 book14 = Book.new({
@@ -368,7 +357,10 @@ book14 = Book.new({
 
 })
 book14.remote_image_url = "https://images-na.ssl-images-amazon.com/images/I/51-M9b-plTL._SX404_BO1,204,203,200_.jpg"
-book14.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book14.resume.attach(
+  io: File.open(File.join(__dir__, '[Walter_Goralski]_The_Illustrated_Network__How_TCP(z-lib.org).pdf')),
+  filename: '[Walter_Goralski]_The_Illustrated_Network__How_TCP(z-lib.org).pdf'
+  )
 book14.save!
 
 book15 = Book.new({
@@ -377,18 +369,18 @@ book15 = Book.new({
   publishing_year: 2017,
   author: "Bruno Skvorc",
   user_id: user_6.id,
-    domain_id: domain_3.id
+  domain_id: domain_3.id
 
 })
 book15.remote_image_url = "https://images-eu.ssl-images-amazon.com/images/I/416QmUkdrWL.jpg"
-book15.resume.attach(io: File.open(path), filename: 'seed_pdf.pdf')
+book15.resume.attach(
+  io: File.open(File.join(__dir__, '[Simon_Mackie,__Bruno_Skvorc,_Ralph_Mason,__Alex_W(z-lib.org).pdf')),
+  filename: '[Simon_Mackie,__Bruno_Skvorc,_Ralph_Mason,__Alex_W(z-lib.org).pdf'
+  )
 book15.save!
 # books = Book.all
 
-
-
 puts 'Creating awesome courses...'
-
 course_1 = Course.new({
   name: "SQL",
   domain_id: domain_3.id
@@ -479,19 +471,19 @@ classnote0 = ClassNote.new({
   user_id: user_2.id,
   course: course_1,
   title: "SQL Basics",
-  author: "Me, Myself and Irene",
+  author: "Lanai Gustro",
   click_counter: 4
 })
 classnote0.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
-classnote0.remote_image_url = File.join(__dir__, 'courses/note_sql.jpg')
+classnote0.remote_image_url = File.join(__dir__, 'notes.pdf')
 classnote0.save!
 
 
 classnote1 = ClassNote.new({
   user_id: user_2.id,
   course: course_1,
-  title: "SQL Median",
-  author: "Me, Myself and Irene",
+  title: "SQL Basics",
+  author: "Irene Mai",
   click_counter: 4
 })
 classnote1.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
@@ -502,7 +494,7 @@ classnote2 = ClassNote.new({
   user_id: user_2.id,
   course: course_1,
   title: "Building Awesome DBs",
-  author: "Me, Myself and Irene",
+  author: "Irene",
   click_counter: 4
 })
 classnote2.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
@@ -513,8 +505,8 @@ classnote2.save!
 classnote3 = ClassNote.new({
   user_id: user_2.id,
   course: course_2,
-  title: "SQL for Pros!!",
-  author: "Me, Myself and Irene",
+  title: "SQL for Pros",
+  author: "Bujina Lasso",
   click_counter: 4
 })
 
@@ -526,8 +518,8 @@ classnote3.save!
 classnote4 = ClassNote.new({
   user_id: user_2.id,
   course: course_3,
-  title: "Front is not made for bitches",
-  author: "Me, Myself and Irene",
+  title: "Front-End Spider",
+  author: "Kabui Fino",
   click_counter: 4
 })
 classnote4.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
@@ -538,8 +530,8 @@ classnote4.save!
 classnote5 = ClassNote.new({
   user_id: user_2.id,
   course: course_6,
-  title: "I'm the king of them bananas",
-  author: "Me, Myself and Irene",
+  title: "SQL for Pros",
+  author: "Gauthiey",
   click_counter: 4
 })
 classnote5.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
@@ -594,11 +586,12 @@ classnote9.save!
 classnote10 = ClassNote.new({
   user_id: user_2.id,
   course: course_4,
-  title: "Front 2.0",
+  title: "Front Cracking",
   author: "Georges",
   click_counter: 4
 })
-classnote10.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
+classnote10.content.attach(
+  io: File.open(path_notes), filename: 'notes.pdf')
 classnote10.remote_image_url = File.join(__dir__, 'courses/note_js.jpg')
 classnote10.save!
 
@@ -609,41 +602,49 @@ classnote11 = ClassNote.new({
   author: "Irene",
   click_counter: 4
 })
-classnote11.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
-classnote11.remote_image_url = File.join(__dir__, 'courses/note_sql.jpg')
+classnote11.content.attach(
+  io: File.open(File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')),
+  filename: 'JavaScriptProgrammingnotes.pdf')
+classnote11.remote_image_url = File.join(__dir__, 'courses/note_js.jpg')
 classnote11.save!
 
 classnote12 = ClassNote.new({
   user_id: user_2.id,
   course: course_5,
-  title: "JS iz da best",
+  title: "Javascript Pro xl",
   author: "Luke Skywalker",
   click_counter: 4
 })
-classnote12.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
-classnote12.remote_image_url = File.join(__dir__, 'courses/note_backend.jpg')
+classnote12.content.attach(
+  io: File.open(File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')),
+  filename: 'JavaScriptProgrammingnotes.pdf')
+classnote12.remote_image_url = File.join(__dir__, 'courses/notes_dat3.jpg')
 classnote12.save!
 
 classnote13 = ClassNote.new({
   user_id: user_2.id,
   course: course_5,
-  title: "Differences Java vs JS?",
+  title: "Java for Noobs",
   author: "Lex Luthor",
   click_counter: 4
 })
-classnote13.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
-classnote13.remote_image_url = File.join(__dir__, 'courses/note_python.jpg')
+classnote13.content.attach(
+  io: File.open(File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')),
+  filename: 'JavaScriptProgrammingnotes.pdf')
+classnote13.remote_image_url = File.join(__dir__, 'courses/notes_dat2.jpg')
 classnote13.save!
 
 classnote14 = ClassNote.new({
   user_id: user_2.id,
   course: course_5,
-  title: "Java is not a Star Wars character",
+  title: "Java for Noobs",
   author: "Obiwan",
   click_counter: 4
 })
-classnote14.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
-classnote14.remote_image_url = File.join(__dir__, 'courses/notes_dat3.jpg')
+classnote14.content.attach(
+  io: File.open(File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')),
+  filename: 'JavaScriptProgrammingnotes.pdf')
+classnote14.remote_image_url = File.join(__dir__, 'courses/notes_dat1.jpg')
 classnote14.save!
 
 classnote15 = ClassNote.new({
@@ -653,26 +654,31 @@ classnote15 = ClassNote.new({
   author: "Lord Anton",
   click_counter: 4
 })
-classnote15.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
-classnote15.remote_image_url = File.join(__dir__, 'courses/notes_dat2.jpg')
+classnote15.content.attach(
+  io: File.open(File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')),
+  filename: 'JavaScriptProgrammingnotes.pdf')
+classnote15.remote_image_url = File.join(__dir__, 'courses/note_python.jpg')
 classnote15.save!
 
 classnote16 = ClassNote.new({
   user_id: user_2.id,
   course: course_5,
-  title: "What YOU need to know on Java",
+  title: "What you need to know on Java",
   author: "Georges Clooney",
   click_counter: 4
 })
-classnote16.content.attach(io: File.open(path_notes), filename: 'notes.pdf')
-classnote16.remote_image_url = File.join(__dir__, 'courses/notes_dat1.jpg')
+classnote16.content.attach(
+  io: File.open(File.join(__dir__, 'JavaScriptProgrammingnotes.pdf')),
+  filename: 'JavaScriptProgrammingnotes.pdf')
+
+classnote16.remote_image_url = File.join(__dir__, 'courses/note_backend.jpg')
 classnote16.save!
 
 classnote17 = ClassNote.new({
   user_id: user_2.id,
   course: course_4,
-  title: "Front End for real Cracks",
-  author: "Margotte",
+  title: "Getting a perfect Front",
+  author: "Sacha",
   click_counter: 4
 })
 classnote17.content.attach(io: File.open(path_notes), filename: 'notes.pdf')

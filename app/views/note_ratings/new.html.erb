@@ -1,0 +1,6 @@
+<div class="rating">
+  <%= simple_form_for [@class_note, @note_rating] do |f| %>
+    <%= f.input :value, label: 'Give a Rating' %>
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+  <% end %>
+</div>

@@ -1,29 +1,23 @@
-<div class="domain-txt">
-    <h1><%= @domain.name %></h1>
-  </div>
-<div class="container-domain">
-
-  <div class="card-domain">
-    <div class="domain_txt">
-      <%= link_to "Library", domain_books_path(@domain) %>
+<div class="syllabus-container">
+  <div class="courses">
+    <div class="domain_title">
+      <h1><%= @domain.name %></h1>
     </div>
-    <%= cl_image_tag("bg_library",
-          width: 300, height: 300, crop: :fill, class: 'domain_pic') %>
-  </div>
-
-  <div class="card-domain">
-    <div class="domain_txt">
-      <%= link_to "News", domain_books_path(@domain) %>
+    <div class="card-domain">
+      <div class="domain_txt">
+        <%= link_to "Library", domain_books_path(@domain) %>
+      </div>
     </div>
-    <%= cl_image_tag("bubble_news",
-          width: 300, height: 300, crop: :fill, class: 'domain_pic') %>
-  </div>
-
-  <div class="card-domain">
-    <div class="domain_txt">
-      <%= link_to "Class Notes", domain_courses_path(@domain) %>
+    <div class="card-domain">
+      <div class="domain_txt">
+        <%= link_to "Class Notes", domain_courses_path(@domain) %>
+      </div>
     </div>
-    <%= cl_image_tag("bg_notes",
-          width: 300, height: 300, crop: :fill, class: 'domain_pic') %>
   </div>
+  <div class="all-notes"></div>
+  <!-- <div class="card-domain">
+    <div class="domain_txt">
+      <%#= link_to "News", domain_books_path(@domain) %>
+    </div>
+  </div> -->
 </div>

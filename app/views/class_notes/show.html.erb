@@ -1,2 +1,30 @@
-<h1>ClassNotes#show</h1>
-<p>Find me in app/views/class_notes/show.html.erb</p>
+<div class="syllabus-container">
+  <div class="courses">
+    <div class="course-card"
+         data-action="click->sliders#showIt"
+         data-index="0">
+          <i class="new-course fas fa-plus-circle"></i>
+    </div>
+    <% @sibling_notes.each_with_index do |note, index| %>
+      <div class="course-card"
+           data-action="click->sliders#showIt"
+           data-index="<%= index %>">
+          <%= link_to note.title, class_note_path(note) %>
+      </div>
+    <% end %>
+  </div>
+  <div class="note-reader">
+    <div class="url"
+             data-controller="pdf"
+             data-pdf='<%= rails_blob_url(@note.content).to_json %>'></div>
+
+    <div class="pdf-reader">
+      <% (1..10).each_with_index do |number| %>
+        <canvas class="pdf" id="the-canvas-<%= number %>"></canvas>
+      <% end %>
+    </div>
+
+  </div>
+
+  <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
+</div>

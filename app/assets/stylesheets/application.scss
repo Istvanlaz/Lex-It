@@ -12,6 +12,9 @@
 @import "components/index";
 @import "pages/index";
 
+body{
+  background-color: #fff4e3;
+}
 .form-inline{
   display: flex;
   justify-content: space-between;
@@ -34,4 +37,7 @@ h1{
   color:white;
 }
 
+.SelectedDomain {
+margin: 30px;
 
+}
